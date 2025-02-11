@@ -41,7 +41,7 @@ add_executable(robot_odom src/robot_odom.cpp)
 ament_target_dependencies(robot_odom
   rclcpp
   geometry_msgs
-  sensor_msgs
+  nav_msgs
   tf2_ros
   tf2
   my_msg

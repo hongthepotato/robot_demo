@@ -162,6 +162,21 @@ class RobotOdomNode : public rclcpp::Node
             0,    0,    0,    0, 1e6, 0,
             0,    0,    0,    0, 0, 1e-9
         }};
+};
+
+int main(int argc, char *argv[])
+{
+  // Initialize ROS 2.
+  rclcpp::init(argc, argv);
+
+  // Create the node.
+  auto node = std::make_shared<RobotOdomNode>();
+
+  // Spin the node.
+  rclcpp::spin(node);
+
+  rclcpp::shutdown();
+  return 0;
 }
 
 
