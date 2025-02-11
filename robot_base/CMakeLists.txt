@@ -51,7 +51,7 @@ add_executable(robot_odom_time src/robot_odom_time.cpp)
 ament_target_dependencies(robot_odom_time
   rclcpp
   geometry_msgs
-  sensor_msgs
+  nav_msgs
   tf2_ros
   tf2
   my_msg  
