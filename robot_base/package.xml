@@ -39,6 +39,7 @@
   <depend>tf2</depend>
   <depend>tf2_ros</depend>
   <depend>nav_msgs</depend>
+  <depend>std_msgs</depend>
 
   <depend>my_msg</depend>
 

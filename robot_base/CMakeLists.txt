@@ -67,21 +67,13 @@ ament_target_dependencies(robot_cmd
 add_executable(robot_rod_cmd src/robot_rod_cmd.cpp)
 ament_target_dependencies(robot_rod_cmd
   rclcpp
-  geometry_msgs
-  sensor_msgs
-  tf2_ros
-  tf2
-  my_msg
+  std_msgs
 )
 
 add_executable(robot_imu src/robot_imu.cpp)
 ament_target_dependencies(robot_imu
   rclcpp
-  geometry_msgs
   sensor_msgs
-  tf2_ros
-  tf2
-  my_msg
 )
 
 # ------------------------------------------------------------------------------
