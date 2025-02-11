@@ -1,22 +1,122 @@
-cmake_minimum_required(VERSION 3.0.2)
+cmake_minimum_required(VERSION 3.5)
 project(robot_base)
 
-## Compile as C++11, supported in ROS Kinetic and newer
-# add_compile_options(-std=c++11)
+## Compile as C++14, supported in ROS2-foxy
+if(NOT CMAKE_CXX_STANDARD)
+  set(CMAKE_CXX_STANDARD 14)
+endif()
 
-## Find catkin macros and libraries
-## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
-## is used, also find other catkin packages
-find_package(catkin REQUIRED COMPONENTS
+# ------------------------------------------------------------------------------
+# Find Dependencies
+# ------------------------------------------------------------------------------
+
+# In ROS 2 we use ament_cmake instead of catkin.
+find_package(ament_cmake REQUIRED)
+
+# Find the required ROS 2 packages:
+find_package(rclcpp REQUIRED)
+find_package(geometry_msgs REQUIRED)
+find_package(sensor_msgs REQUIRED)
+find_package(tf2_ros REQUIRED)
+find_package(tf2 REQUIRED)
+find_package(my_msg REQUIRED)  # This is your custom message package.
+# If needed, you can add other dependencies like nav_msgs here:
+# find_package(nav_msgs REQUIRED)
+
+
+# ------------------------------------------------------------------------------
+# Include Directories
+# ------------------------------------------------------------------------------
+
+include_directories(
+  include
+)
+
+# ------------------------------------------------------------------------------
+# Declare Executables and Link Dependencies
+# ------------------------------------------------------------------------------
+
+# For each executable, we create a target and link it with appropriate libraries
+add_executable(robot_odom src/robot_odom.cpp)
+ament_target_dependencies(robot_odom
+  rclcpp
   geometry_msgs
-  roscpp
-  rospy
   sensor_msgs
-  tf
+  tf2_ros
   tf2
-  message_generation
   my_msg
 )
+
+add_executable(robot_odom_time src/robot_odom_time.cpp)
+ament_target_dependencies(robot_odom_time
+  rclcpp
+  geometry_msgs
+  sensor_msgs
+  tf2_ros
+  tf2
+  my_msg  
+)
+
+add_executable(robot_cmd src/robot_cmd.cpp)
+ament_target_dependencies(robot_cmd
+  rclcpp
+  geometry_msgs
+  sensor_msgs
+  tf2_ros
+  tf2
+  my_msg
+)
+
+add_executable(robot_rod_cmd src/robot_rod_cmd.cpp)
+ament_target_dependencies(robot_rod_cmd
+  rclcpp
+  geometry_msgs
+  sensor_msgs
+  tf2_ros
+  tf2
+  my_msg
+)
+
+add_executable(robot_imu src/robot_imu.cpp)
+ament_target_dependencies(robot_imu
+  rclcpp
+  geometry_msgs
+  sensor_msgs
+  tf2_ros
+  tf2
+  my_msg
+)
+
+# ------------------------------------------------------------------------------
+# Install Targets
+# ------------------------------------------------------------------------------
+
+install(TARGETS
+  robot_odom
+  robot_odom_time
+  robot_cmd
+  robot_rod_cmd
+  robot_imu
+  DESTINATION lib/${PROJECT_NAME}
+)
+
+# Optionally, install header files from the include directory.
+install(DIRECTORY include/
+  DESTINATION include
+)
+
+# ------------------------------------------------------------------------------
+# Ament Package
+# ------------------------------------------------------------------------------
+
+ament_package()
+
+
+
+
+
+
+
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
@@ -120,10 +220,10 @@ catkin_package(
 
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
-include_directories(
-  include
-  ${catkin_INCLUDE_DIRS}
-)
+# include_directories(
+#   include
+#   ${catkin_INCLUDE_DIRS}
+# )
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
@@ -138,11 +238,11 @@ include_directories(
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
-add_executable(robot_odom src/robot_odom.cpp)
-add_executable(robot_odom_time src/robot_odom_time.cpp)
-add_executable(robot_cmd src/robot_cmd.cpp)
-add_executable(robot_rod_cmd src/robot_rod_cmd.cpp)
-add_executable(robot_imu src/robot_imu.cpp)
+# add_executable(robot_odom src/robot_odom.cpp)
+# add_executable(robot_odom_time src/robot_odom_time.cpp)
+# add_executable(robot_cmd src/robot_cmd.cpp)
+# add_executable(robot_rod_cmd src/robot_rod_cmd.cpp)
+# add_executable(robot_imu src/robot_imu.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -155,21 +255,21 @@ add_executable(robot_imu src/robot_imu.cpp)
 # add_dependencies(${PROJECT_NAME}_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
-target_link_libraries(robot_odom
-  ${catkin_LIBRARIES}
-) 
-target_link_libraries(robot_odom_time
-  ${catkin_LIBRARIES}
-)
-target_link_libraries(robot_cmd
-  ${catkin_LIBRARIES}
-)
-target_link_libraries(robot_rod_cmd
-  ${catkin_LIBRARIES}
-)
-target_link_libraries(robot_imu
-  ${catkin_LIBRARIES}
-)
+# target_link_libraries(robot_odom
+#   ${catkin_LIBRARIES}
+# ) 
+# target_link_libraries(robot_odom_time
+#   ${catkin_LIBRARIES}
+# )
+# target_link_libraries(robot_cmd
+#   ${catkin_LIBRARIES}
+# )
+# target_link_libraries(robot_rod_cmd
+#   ${catkin_LIBRARIES}
+# )
+# target_link_libraries(robot_imu
+#   ${catkin_LIBRARIES}
+# )
 
 
 #############
