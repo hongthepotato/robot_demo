@@ -1,70 +1,108 @@
-#include "ros/ros.h"
-#include "my_msg/driver_control.h"
-#include "robot_base/robot_base.h"
-#include <geometry_msgs/Twist.h>
-// #include <ros/time.h>
+#include "rclcpp/rclcpp.hpp"
+#include "my_msg/msg/driver_control.hpp"       // ROS 2 custom message header
+#include "geometry_msgs/msg/twist.hpp"
+#include "robot_base/robot_base.h"             // Contains constants like ROBOT_RADIUS, length_per_circle
+#include <chrono>
+#include <thread>
 
-ros::Publisher pub;
+using namespace std::chrono_literals;
 
-void cmdCallback(const geometry_msgs::Twist& msg)
+class RobotCmdNode : public rclcpp::Node
 {
-    double RobotV_,RobotYawRate_,speedl,speedr;
-    my_msg::driver_control dc_cmd;
+public:
+  RobotCmdNode() : Node("robot_vel_cmd")
+  {
+    // Create a subscription to "cmd_vel" (Twist messages)
+    sub_ = this->create_subscription<geometry_msgs::msg::Twist>(
+      "cmd_vel", 50,
+      std::bind(&RobotCmdNode::cmdCallback, this, std::placeholders::_1)
+    );
+
+    // Create a publisher for "dc_cmd" (custom DriverControl messages)
+    pub_ = this->create_publisher<my_msg::msg::DriverControl>("dc_cmd", 5);
+
+    // Wait 6 seconds for lower-level initialization
+    RCLCPP_INFO(this->get_logger(), "Waiting 6 seconds for lower-level initialization...");
+    std::this_thread::sleep_for(6s);
+
+    // Send an initial command to clear encoder data
+    my_msg::msg::DriverControl dc_cmd;
+    dc_cmd.mod = 0x04;      // Clear encoder data
+    dc_cmd.quick_stop = 0;
+    pub_->publish(dc_cmd);
+    RCLCPP_INFO(this->get_logger(), "Sent clear encoder command");
+  }
+
+private:
+  void cmdCallback(const geometry_msgs::msg::Twist::SharedPtr msg)
+  {
+    double RobotV_, RobotYawRate_, speedl, speedr;
+    my_msg::msg::DriverControl dc_cmd;
     dc_cmd.mod = 3;
-    dc_cmd.quick_stop =0;
+    dc_cmd.quick_stop = 0;
 
-    RobotV_  = msg.linear.x;//m/s
-    RobotYawRate_ = msg.angular.z;//rad/s
-    // ROS_INFO("RobotV_:%f,RobotYawRate_:%f",RobotV_,RobotYawRate_);
-    double r = RobotV_ / RobotYawRate_;//m
+    // Extract linear and angular velocity from the Twist message
+    RobotV_ = msg->linear.x;      // m/s
+    RobotYawRate_ = msg->angular.z; // rad/s
 
-    if(RobotV_ == 0)      //旋转
+    // Compute turning radius if angular velocity is not zero.
+    double r = (RobotYawRate_ != 0) ? (RobotV_ / RobotYawRate_) : 0.0;
+
+    // Compute wheel speeds based on the motion mode.
+    if (RobotV_ == 0)  // In-place rotation
     {
-        speedl  =(-RobotYawRate_ * ROBOT_RADIUS);//m/s
-        speedr =(RobotYawRate_ * ROBOT_RADIUS);//m/s
-    } 
-    else if(RobotYawRate_ == 0)//直线
-    {
-        speedl =RobotV_;//m/s
-        speedr = RobotV_;
+      speedl = (-RobotYawRate_ * ROBOT_RADIUS); // m/s
+      speedr = (RobotYawRate_ * ROBOT_RADIUS);  // m/s
     }
-    else//速度不一致
+    else if (RobotYawRate_ == 0) // Straight-line motion
     {
-        speedl  = (RobotYawRate_ * (r - ROBOT_RADIUS));//m/s
-        speedr = (RobotYawRate_ * (r + ROBOT_RADIUS));
+      speedl = RobotV_;
+      speedr = RobotV_;
     }
-    speedl = speedl / length_per_circle * 60.0f;  
-    speedr = speedr / length_per_circle * 60.0f;  
+    else // Curved motion
+    {
+      speedl = (RobotYawRate_ * (r - ROBOT_RADIUS)); // m/s
+      speedr = (RobotYawRate_ * (r + ROBOT_RADIUS));
+    }
 
-    if(speedl <1 && speedl>-1)
-        if(speedl <-0.05) speedl = -1;
-        else if(speedl >0.05) speedl = 1;
-    if(speedr <1 && speedr>-1)
-        if(speedr <-0.05) speedr = -1;
-        else if(speedr >0.05) speedr = 1;
+    // Convert the computed speeds into desired units
+    speedl = speedl / length_per_circle * 60.0f;
+    speedr = speedr / length_per_circle * 60.0f;
 
-    dc_cmd.speedl = (int16_t)speedl;
-    dc_cmd.speedr = (int16_t)speedr;
+    // Apply a threshold to ensure non-negligible speeds
+    if (speedl < 1 && speedl > -1) {
+      if (speedl < -0.05)
+        speedl = -1;
+      else if (speedl > 0.05)
+        speedl = 1;
+    }
+    if (speedr < 1 && speedr > -1) {
+      if (speedr < -0.05)
+        speedr = -1;
+      else if (speedr > 0.05)
+        speedr = 1;
+    }
 
-    pub.publish(dc_cmd);
-    // ROS_INFO("speedr:%d,speedl:%d",dc_cmd.speedr,dc_cmd.speedl);
-}
+    // Set the wheel speeds in the custom message (casting to int16_t)
+    dc_cmd.speedl = static_cast<int16_t>(speedl);
+    dc_cmd.speedr = static_cast<int16_t>(speedr);
 
-int main(int argc, char  *argv[])
+    // Publish the command message
+    pub_->publish(dc_cmd);
+    // Optionally, you can log the sent speeds:
+    // RCLCPP_INFO(this->get_logger(), "Published speeds: left=%d, right=%d", dc_cmd.speedl, dc_cmd.speedr);
+  }
+
+  // Member variables for publisher and subscription
+  rclcpp::Subscription<geometry_msgs::msg::Twist>::SharedPtr sub_;
+  rclcpp::Publisher<my_msg::msg::DriverControl>::SharedPtr pub_;
+};
+
+int main(int argc, char *argv[])
 {
-    /* code */
-    setlocale(LC_ALL,"");
-    ros::init(argc,argv,"robot_vel_cmd");
-    ros::NodeHandle nh;
-    ros::Subscriber sub =nh.subscribe("cmd_vel", 50, cmdCallback);
-    pub = nh.advertise<my_msg::driver_control>("dc_cmd",5);
-
-    my_msg::driver_control dc_cmd;
-    ros::Duration(6).sleep();
-    dc_cmd.mod = 0x04;      //清理编码器数据
-    dc_cmd.quick_stop= 0;
-    pub.publish(dc_cmd);
-    ROS_INFO("send clear encode");
-    ros::spin();
-    return 0;
+  rclcpp::init(argc, argv);
+  auto node = std::make_shared<RobotCmdNode>();
+  rclcpp::spin(node);
+  rclcpp::shutdown();
+  return 0;
 }

@@ -61,9 +61,6 @@ add_executable(robot_cmd src/robot_cmd.cpp)
 ament_target_dependencies(robot_cmd
   rclcpp
   geometry_msgs
-  sensor_msgs
-  tf2_ros
-  tf2
   my_msg
 )
 
