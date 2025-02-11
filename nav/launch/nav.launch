@@ -1,0 +1,17 @@
+<!-- 机器人启动文件：
+        1.启动底盘
+        2.启动激光雷达
+        
+ -->
+<launch>
+                <!-- tf在start_Stm32.launch中开启 -->
+        <include file="$(find robot_base)/launch/start_stm32.launch"/>
+        <!-- <include file="$(find usb_cam)/launch/usb_cam-test.launch" /> -->
+        <include file="$(find rplidar_ros)/launch/rplidar_s2.launch" />
+        <!-- 建图  -->
+        <!-- <include file="$(find nav)/launch/gmapping.launch"/>     -->
+        <!-- 发布地图      -->
+        <!-- <include file="$(find nav)/launch/pub_map.launch" />
+        <include file="$(find nav)/launch/amcl.launch" />
+        <include file="$(find nav)/launch/move_base.launch"/> -->
+</launch>

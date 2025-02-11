@@ -1,0 +1,6 @@
+<launch>
+
+<!-- <node pkg="" tpye="" name="" /> -->
+<node pkg="rosserial_python" type="serial_node.py" name="rosserial_stm32" args="_port:=/dev/ttyACM0 _baud:=115200" output="screen"/>
+<!-- <node pkg="my_msg" type="trans" name="trans_odo_data" output="screen"/> -->
+</launch>

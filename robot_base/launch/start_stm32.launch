@@ -1,0 +1,10 @@
+<launch>
+<include file="$(find robot_base)/launch/start_tf.launch" />
+
+<node pkg="rosserial_python" type="serial_node.py" name="rosserial_stm32" args="_port:=/dev/stm32 _baud:=1000000" output="screen"/>
+<node pkg="robot_base" type="robot_odom_time" name="robot_odom_time" output="screen"/>
+<!-- <node pkg="robot_base" type="robot_odom" name="robot_odom" output="screen"/> -->
+<node pkg="robot_base" type="robot_cmd" name="robot_cmd" output="screen"/>
+<node pkg="robot_base" type="robot_imu" name="robot_imu" output="screen"/>
+<include file="$(find robot_base)/launch/ekf_imu_odom.launch"/>
+</launch>
