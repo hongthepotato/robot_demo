@@ -1,17 +1,18 @@
-cmake_minimum_required(VERSION 3.0.2)
+cmake_minimum_required(VERSION 3.5)
 project(my_msg)
 
-## Compile as C++11, supported in ROS Kinetic and newer
-# add_compile_options(-std=c++11)
+# Set the C++ standard if not already set
+if(NOT CMAKE_CXX_STANDARD)
+  set(CMAKE_CXX_STANDARD 14)
+endif()
 
-## Find catkin macros and libraries
-## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
-## is used, also find other catkin packages
-find_package(catkin REQUIRED COMPONENTS
-  roscpp
-  std_msgs
-  message_generation
-)
+# Find ament_cmake and the ROS 2 message generation package
+find_package(ament_cmake REQUIRED)
+find_package(rosidl_default_generators REQUIRED)
+
+# Find additional dependencies that your messages use
+find_package(std_msgs REQUIRED)
+find_package(rclcpp REQUIRED)  # needed if your executable uses ROS 2 C++ client libraries
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
@@ -47,11 +48,11 @@ find_package(catkin REQUIRED COMPONENTS
 ##   * add every package in MSG_DEP_SET to generate_messages(DEPENDENCIES ...)
 
 ## Generate messages in the 'msg' folder
-add_message_files(
-  FILES
-  driver_odo.msg
-  ir_state.msg
-  driver_control.msg
+# List your message files
+set(msg_files
+  "msg/DriverOdo.msg"
+  "msg/IrState.msg"
+  "msg/DriverControl.msg"
 )
 
 ## Generate services in the 'srv' folder
@@ -68,11 +69,13 @@ add_message_files(
 #   Action2.action
 # )
 
-## Generate added messages and services with any dependencies listed here
-generate_messages(
-  DEPENDENCIES
-  std_msgs
+# Generate interfaces (messages) from the .msg files.
+rosidl_generate_interfaces(${PROJECT_NAME}
+  ${msg_files}
+  DEPENDENCIES std_msgs
 )
+
+ament_export_dependencies(rosidl_default_runtime)
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
@@ -103,12 +106,12 @@ generate_messages(
 ## LIBRARIES: libraries you create in this project that dependent projects also need
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
-catkin_package(
-#  INCLUDE_DIRS include
-#  LIBRARIES my_msg
- CATKIN_DEPENDS roscpp std_msgs message_runtime
-#  DEPENDS system_lib
-)
+# catkin_package(
+# #  INCLUDE_DIRS include
+# #  LIBRARIES my_msg
+#  CATKIN_DEPENDS roscpp std_msgs message_runtime
+# #  DEPENDS system_lib
+# )
 
 ###########
 ## Build ##
@@ -116,10 +119,10 @@ catkin_package(
 
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
-include_directories(
-# include
-  ${catkin_INCLUDE_DIRS}
-)
+# include_directories(
+# # include
+#   ${catkin_INCLUDE_DIRS}
+# )
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
@@ -135,7 +138,14 @@ include_directories(
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
 # add_executable(${PROJECT_NAME}_node src/my_msg_node.cpp)
+# Build an executable from src/trans.cpp
 add_executable(trans src/trans.cpp)
+ament_export_dependencies(trans rclcpp std_msgs)
+install(TARGETS
+	    trans
+	      DESTINATION lib/${PROJECT_NAME})
+rosidl_target_interfaces(trans
+	        ${PROJECT_NAME} "rosidl_typesupport_cpp")
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -146,16 +156,25 @@ add_executable(trans src/trans.cpp)
 ## Add cmake target dependencies of the executable
 ## same as for the library above
 # add_dependencies(${PROJECT_NAME}_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-add_dependencies(trans ${PROJECT_NAME}_generate_messages_cpp)
+
+# Ensure that the trans target is built after the message interfaces are generated.
+# add_dependencies(trans ${PROJECT_NAME}_generate_interfaces_cpp)
 
 ## Specify libraries to link a library or executable target against
 # target_link_libraries(${PROJECT_NAME}_node
 #   ${catkin_LIBRARIES}
 # )
 
+# Link libraries to the executable. Use rclcpp if needed.
 target_link_libraries(trans
-  ${catkin_LIBRARIES}
+  rclcpp::rclcpp
 )
+
+# Export dependencies so that downstream packages can use the generated interfaces.
+
+
+# Declare the package as an ament package.
+ament_package()
 
 #############
 ## Install ##

@@ -1,36 +1,49 @@
-#include "ros/ros.h"
-#include "my_msg/driver_odo.h"
-#include "std_msgs/String.h"
+#include "rclcpp/rclcpp.hpp"
+#include "my_msg/msg/driver_odo.hpp"   // ROS 2 header for your custom message
+#include "std_msgs/msg/string.hpp"
 #include <sstream>
 
-ros::Publisher pub;
-
-void callback(const my_msg::driver_odo::ConstPtr& odo)
+class Rostalker : public rclcpp::Node
 {
-    ROS_INFO("odo数据为l:%d,r:%d",odo->odol , odo->odor);
+public:
+  Rostalker() : Node("rostalker")
+  {
+    // Create a publisher for std_msgs::msg::String on the "stm32odo" topic with a queue size of 10.
+    pub_ = this->create_publisher<std_msgs::msg::String>("stm32odo", 10);
 
-    std_msgs::String pubstr;
+    // Create a subscription to my_msg::msg::DriverOdo on the "stm32_odo" topic with a queue size of 10.
+    sub_ = this->create_subscription<my_msg::msg::DriverOdo>(
+      "stm32_odo",
+      10,
+      std::bind(&Rostalker::callback, this, std::placeholders::_1)
+    );
+  }
 
+private:
+  void callback(const my_msg::msg::DriverOdo::SharedPtr odo)
+  {
+    // Log the received data
+    RCLCPP_INFO(this->get_logger(), "odo数据为l:%d, r:%d", odo->odol, odo->odor);
+
+    // Create a std_msgs::msg::String message and populate it
+    std_msgs::msg::String pubstr;
     std::stringstream ss;
     ss << "odo数据为l:" << odo->odol << ",r:" << odo->odor;
     pubstr.data = ss.str();
 
-    pub.publish(pubstr);
+    // Publish the message
+    pub_->publish(pubstr);
+  }
 
-}
+  rclcpp::Publisher<std_msgs::msg::String>::SharedPtr pub_;
+  rclcpp::Subscription<my_msg::msg::DriverOdo>::SharedPtr sub_;
+};
 
-int main(int argc, char  *argv[])
+int main(int argc, char *argv[])
 {
-    /* code */
-    setlocale(LC_ALL,"");
-    ros::init(argc,argv,"rostalker");
-    ros::NodeHandle nh;
-
-    pub = nh.advertise<std_msgs::String>("stm32odo",10);
-
-    ros::Subscriber sub =nh.subscribe<my_msg::driver_odo>("stm32_odo",10,callback);
-
-    ros::spin();
-
-    return 0;
+  rclcpp::init(argc, argv);
+  auto node = std::make_shared<Rostalker>();
+  rclcpp::spin(node);
+  rclcpp::shutdown();
+  return 0;
 }
