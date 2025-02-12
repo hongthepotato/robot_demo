@@ -133,7 +133,7 @@ private:
   my_msg::msg::DriverOdo old_odo_data;
   
   // Covariance arrays.
-  const boost::array<double, 36> ODOM_POSE_COVARIANCE = {{
+  std::array<double, 36> ODOM_POSE_COVARIANCE = {{
       1e-3, 0,    0,    0, 0, 0,
       0,    1e-3, 0,    0, 0, 0,
       0,    0,    1e6,  0, 0, 0,
@@ -142,7 +142,7 @@ private:
       0,    0,    0,    0, 0,   1e3
   }};
   
-  const boost::array<double, 36> ODOM_POSE_COVARIANCE2 = {{
+  std::array<double, 36> ODOM_POSE_COVARIANCE2 = {{
       1e-9, 0,     0,    0, 0, 0,
       0,    1e-3,  1e-9, 0, 0, 0,
       0,    0,     1e6,  0, 0, 0,
@@ -151,7 +151,7 @@ private:
       0,    0,     0,    0, 0,   1e-9
   }};
   
-  const boost::array<double, 36> ODOM_TWIST_COVARIANCE = {{
+  std::array<double, 36> ODOM_TWIST_COVARIANCE = {{
       1e-3, 0,    0,    0, 0, 0,
       0,    1e-3, 0,    0, 0, 0,
       0,    0,    1e6,  0, 0, 0,
@@ -160,7 +160,7 @@ private:
       0,    0,    0,    0, 0,   1e3
   }};
   
-  const boost::array<double, 36> ODOM_TWIST_COVARIANCE2 = {{
+  std::array<double, 36> ODOM_TWIST_COVARIANCE2 = {{
       1e-9, 0,     0,    0, 0, 0,
       0,    1e-3,  1e-9, 0, 0, 0,
       0,    0,     1e6,  0, 0, 0,

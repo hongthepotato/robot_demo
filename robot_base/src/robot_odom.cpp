@@ -1,7 +1,7 @@
 #include "rclcpp/rclcpp.hpp"
 
 // Use the ROS 2 style header for custom message.
-#include "my_msg/msg/driver_odo.hpp" ## This line may be problematic
+#include "my_msg/msg/driver_odo.hpp"
 
 // Include the header that defines robot-specific constants
 #include "robot_base/robot_base.h"
@@ -106,7 +106,7 @@ class RobotOdomNode : public rclcpp::Node
             odom_trans.transform.translation.x = odomx;
             odom_trans.transform.translation.y = odomy;
             odom_trans.transform.translation.z = 0.0;
-            odom_trans.transform.roration = odom_quat;
+            odom_trans.transform.rotation = odom_quat;
 
             // Broadcasting the transform
             tf_broadcaster_->sendTransform(odom_trans);
@@ -115,7 +115,7 @@ class RobotOdomNode : public rclcpp::Node
             nav_msgs::msg::Odometry msgl;
             msgl.header.stamp = current_time;
             msgl.header.frame_id = "odom";
-            msgl.child.frame_id = "base_footprint";
+            msgl.child_frame_id = "base_footprint";
             msgl.pose.pose.position.x = odomx;
             msgl.pose.pose.position.y = odomy;
             msgl.pose.pose.position.z = 0.0;
@@ -145,7 +145,7 @@ class RobotOdomNode : public rclcpp::Node
         double odomy;
         double odomth;
       
-        boost::array<double, 36> odom_pose_covariance = {{
+        std::array<double, 36> odom_pose_covariance = {{
             1e-9, 0,    0,    0, 0, 0,
             0,    1e-3, 1e-9, 0, 0, 0,
             0,    0,    1e6,  0, 0, 0,
@@ -154,7 +154,7 @@ class RobotOdomNode : public rclcpp::Node
             0,    0,    0,    0, 0, 1e-9
         }};
       
-        boost::array<double, 36> odom_twist_covariance = {{
+        std::array<double, 36> odom_twist_covariance = {{
             1e-9, 0,    0,    0, 0, 0,
             0,    1e-3, 1e-9, 0, 0, 0,
             0,    0,    1e6,  0, 0, 0,
