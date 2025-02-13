@@ -14,12 +14,12 @@ def generate_launch_description():
     # Create the EKF node from robot_localization package.
     ekf_node = Node(
         package='robot_localization',
-        executable='ekf_localization_node',
+        executable='ekf_node',
         name='ekf_imu_odom',
         output='screen',
         parameters=[config_file],
-        remapping=[('odometry/filtered', 'odom')]
+        remappings=[('odometry/filtered', 'odom')]
         # If needed, add additional remappings here
     )
 
-    return LaunchDescription([elk_node])
+    return LaunchDescription([ekf_node])
