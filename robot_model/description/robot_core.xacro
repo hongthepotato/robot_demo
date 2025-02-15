@@ -153,4 +153,27 @@
         <mu2 value="0.001"/>
     </gazebo>
 
+
+    <!-- LASER LINK-->
+
+    <link name="laser"></link>
+
+    <joint name="laser_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="laser"/>
+        <origin xyz="0.1086 0 0.28" rpy="${pi} 0 0"/>
+    </joint>
+
+    <!-- IMU LINK-->
+
+    <link name="imu_link"></link>
+
+    <joint name="imu_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="imu_link"/>
+        <origin xyz="0.075 -0.075 0.1" rpy="${pi} 0 0"/>
+    </joint>
+    
+
+
 </robot>
