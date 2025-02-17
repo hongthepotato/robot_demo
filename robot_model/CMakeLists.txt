@@ -37,4 +37,18 @@ install(
   DESTINATION share/${PROJECT_NAME}
 )
 
+install(DIRECTORY launch/
+  DESTINATION share/${PROJECT_NAME}/launch
+)
+
+# Optionally, install header files from the include directory.
+install(DIRECTORY include/
+  DESTINATION include
+)
+
+install(
+  DIRECTORY param/
+  DESTINATION share/${PROJECT_NAME}/param
+)
+
 ament_package()
