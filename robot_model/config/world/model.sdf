@@ -1,0 +1,3282 @@
+<?xml version='1.0'?>
+<sdf version='1.7'>
+  <model name='world'>
+    <pose>-10.459 -2.598 0 0 -0 0</pose>
+
+    <!-- THE OUTER FOUR WALLS-->
+    <link name='Wall_8'>
+      <collision name='Wall_8_Collision'>
+        <geometry>
+          <box>
+            <size>15 0.15 2.5</size>
+          </box>
+        </geometry>
+        <pose>0 0 1.25 0 -0 0</pose>
+      </collision>
+      <visual name='Wall_8_Visual'>
+        <pose>0 0 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>15 0.15 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Grey</name>
+          </script>
+          <ambient>1 1 1 1</ambient>
+        </material>
+        <meta>
+          <layer>0</layer>
+        </meta>
+      </visual>
+      <pose>-22.68 0 0 0 -0 -1.5708</pose>
+    </link>
+
+    <link name='Wall_9'>
+      <collision name='Wall_9_Collision'>
+        <geometry>
+          <box>
+            <size>45.51 0.15 2.5</size>
+          </box>
+        </geometry>
+        <pose>0 0 1.25 0 -0 0</pose>
+      </collision>
+      <visual name='Wall_9_Visual'>
+        <pose>0 0 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>45.51 0.15 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Grey</name>
+          </script>
+          <ambient>1 1 1 1</ambient>
+        </material>
+        <meta>
+          <layer>0</layer>
+        </meta>
+      </visual>
+      <pose>0 -7.425 0 0 -0 0</pose>
+    </link>
+
+    <link name='Wall_10'>
+      <collision name='Wall_10_Collision'>
+        <geometry>
+          <box>
+            <size>15.0001 0.15 2.5</size>
+          </box>
+        </geometry>
+        <pose>0 0 1.25 0 -0 0</pose>
+      </collision>
+      <visual name='Wall_10_Visual'>
+        <pose>0 0 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>15.0001 0.15 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Grey</name>
+          </script>
+          <ambient>1 1 1 1</ambient>
+        </material>
+        <meta>
+          <layer>0</layer>
+        </meta>
+      </visual>
+      <pose>22.68 0 0 0 -0 1.5708</pose>
+    </link>
+
+    <link name='Wall_11'>
+      <collision name='Wall_11_Collision'>
+        <geometry>
+          <box>
+            <size>45.51 0.15 2.5</size>
+          </box>
+        </geometry>
+        <pose>0 0 1.25 0 -0 0</pose>
+      </collision>
+      <visual name='Wall_11_Visual'>
+        <pose>0 0 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>45.51 0.15 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Grey</name>
+          </script>
+          <ambient>1 1 1 1</ambient>
+        </material>
+        <meta>
+          <layer>0</layer>
+        </meta>
+      </visual>
+      <pose>0 7.425 0 0 -0 3.14159</pose>
+    </link>
+
+
+    <!-- THE INSIDE PILLARS-->
+    <!-- <include>
+      <uri>model://pillar</uri>
+      <name>pillar_1</name>
+      <pose>-21 6.5 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://pillar</uri>
+      <name>pillar_2</name>
+      <pose>-21 5.5 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://pillar</uri>
+      <name>pillar_3</name>
+      <pose>-21 4.5 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://pillar</uri>
+      <name>pillar_4</name>
+      <pose>-21 3.5 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://pillar</uri>
+      <name>pillar_5</name>
+      <pose>-21 2.5 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://pillar</uri>
+      <name>pillar_6</name>
+      <pose>-21 1.5 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://pillar</uri>
+      <name>pillar_7</name>
+      <pose>-21 0.5 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://pillar</uri>
+      <name>pillar_8</name>
+      <pose>-21 -0.5 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://pillar</uri>
+      <name>pillar_9</name>
+      <pose>-21 -1.5 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://pillar</uri>
+      <name>pillar_10</name>
+      <pose>-21 -2.5 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://pillar</uri>
+      <name>pillar_11</name>
+      <pose>-21 -3.5 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://pillar</uri>
+      <name>pillar_12</name>
+      <pose>-21 -4.5 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://pillar</uri>
+      <name>pillar_13</name>
+      <pose>-21 -5.5 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://pillar</uri>
+      <name>pillar_14</name>
+      <pose>-21 -6.5 0 0 0 0</pose>
+    </include> -->
+    
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-21.0_-6.5</name>
+  <pose>-21.0 -6.5 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-21.0_-5.2</name>
+  <pose>-21.0 -5.2 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-21.0_-3.9000000000000004</name>
+  <pose>-21.0 -3.9000000000000004 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-21.0_-2.6000000000000005</name>
+  <pose>-21.0 -2.6000000000000005 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-21.0_-1.3000000000000007</name>
+  <pose>-21.0 -1.3000000000000007 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-21.0_-8.881784197001252e-16</name>
+  <pose>-21.0 -8.881784197001252e-16 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-21.0_1.299999999999999</name>
+  <pose>-21.0 1.299999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-21.0_2.599999999999998</name>
+  <pose>-21.0 2.599999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-21.0_3.8999999999999986</name>
+  <pose>-21.0 3.8999999999999986 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-21.0_5.199999999999999</name>
+  <pose>-21.0 5.199999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-21.0_6.499999999999998</name>
+  <pose>-21.0 6.499999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-19.9_-6.5</name>
+  <pose>-19.9 -6.5 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-19.9_-5.2</name>
+  <pose>-19.9 -5.2 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-19.9_-3.9000000000000004</name>
+  <pose>-19.9 -3.9000000000000004 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-19.9_-2.6000000000000005</name>
+  <pose>-19.9 -2.6000000000000005 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-19.9_-1.3000000000000007</name>
+  <pose>-19.9 -1.3000000000000007 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-19.9_-8.881784197001252e-16</name>
+  <pose>-19.9 -8.881784197001252e-16 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-19.9_1.299999999999999</name>
+  <pose>-19.9 1.299999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-19.9_2.599999999999998</name>
+  <pose>-19.9 2.599999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-19.9_3.8999999999999986</name>
+  <pose>-19.9 3.8999999999999986 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-19.9_5.199999999999999</name>
+  <pose>-19.9 5.199999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-19.9_6.499999999999998</name>
+  <pose>-19.9 6.499999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-18.799999999999997_-6.5</name>
+  <pose>-18.799999999999997 -6.5 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-18.799999999999997_-5.2</name>
+  <pose>-18.799999999999997 -5.2 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-18.799999999999997_-3.9000000000000004</name>
+  <pose>-18.799999999999997 -3.9000000000000004 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-18.799999999999997_-2.6000000000000005</name>
+  <pose>-18.799999999999997 -2.6000000000000005 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-18.799999999999997_-1.3000000000000007</name>
+  <pose>-18.799999999999997 -1.3000000000000007 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-18.799999999999997_-8.881784197001252e-16</name>
+  <pose>-18.799999999999997 -8.881784197001252e-16 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-18.799999999999997_1.299999999999999</name>
+  <pose>-18.799999999999997 1.299999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-18.799999999999997_2.599999999999998</name>
+  <pose>-18.799999999999997 2.599999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-18.799999999999997_3.8999999999999986</name>
+  <pose>-18.799999999999997 3.8999999999999986 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-18.799999999999997_5.199999999999999</name>
+  <pose>-18.799999999999997 5.199999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-18.799999999999997_6.499999999999998</name>
+  <pose>-18.799999999999997 6.499999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-17.699999999999996_-6.5</name>
+  <pose>-17.699999999999996 -6.5 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-17.699999999999996_-5.2</name>
+  <pose>-17.699999999999996 -5.2 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-17.699999999999996_-3.9000000000000004</name>
+  <pose>-17.699999999999996 -3.9000000000000004 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-17.699999999999996_-2.6000000000000005</name>
+  <pose>-17.699999999999996 -2.6000000000000005 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-17.699999999999996_-1.3000000000000007</name>
+  <pose>-17.699999999999996 -1.3000000000000007 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-17.699999999999996_-8.881784197001252e-16</name>
+  <pose>-17.699999999999996 -8.881784197001252e-16 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-17.699999999999996_1.299999999999999</name>
+  <pose>-17.699999999999996 1.299999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-17.699999999999996_2.599999999999998</name>
+  <pose>-17.699999999999996 2.599999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-17.699999999999996_3.8999999999999986</name>
+  <pose>-17.699999999999996 3.8999999999999986 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-17.699999999999996_5.199999999999999</name>
+  <pose>-17.699999999999996 5.199999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-17.699999999999996_6.499999999999998</name>
+  <pose>-17.699999999999996 6.499999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-16.599999999999994_-6.5</name>
+  <pose>-16.599999999999994 -6.5 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-16.599999999999994_-5.2</name>
+  <pose>-16.599999999999994 -5.2 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-16.599999999999994_-3.9000000000000004</name>
+  <pose>-16.599999999999994 -3.9000000000000004 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-16.599999999999994_-2.6000000000000005</name>
+  <pose>-16.599999999999994 -2.6000000000000005 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-16.599999999999994_-1.3000000000000007</name>
+  <pose>-16.599999999999994 -1.3000000000000007 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-16.599999999999994_-8.881784197001252e-16</name>
+  <pose>-16.599999999999994 -8.881784197001252e-16 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-16.599999999999994_1.299999999999999</name>
+  <pose>-16.599999999999994 1.299999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-16.599999999999994_2.599999999999998</name>
+  <pose>-16.599999999999994 2.599999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-16.599999999999994_3.8999999999999986</name>
+  <pose>-16.599999999999994 3.8999999999999986 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-16.599999999999994_5.199999999999999</name>
+  <pose>-16.599999999999994 5.199999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-16.599999999999994_6.499999999999998</name>
+  <pose>-16.599999999999994 6.499999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-15.499999999999993_-6.5</name>
+  <pose>-15.499999999999993 -6.5 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-15.499999999999993_-5.2</name>
+  <pose>-15.499999999999993 -5.2 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-15.499999999999993_-3.9000000000000004</name>
+  <pose>-15.499999999999993 -3.9000000000000004 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-15.499999999999993_-2.6000000000000005</name>
+  <pose>-15.499999999999993 -2.6000000000000005 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-15.499999999999993_-1.3000000000000007</name>
+  <pose>-15.499999999999993 -1.3000000000000007 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-15.499999999999993_-8.881784197001252e-16</name>
+  <pose>-15.499999999999993 -8.881784197001252e-16 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-15.499999999999993_1.299999999999999</name>
+  <pose>-15.499999999999993 1.299999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-15.499999999999993_2.599999999999998</name>
+  <pose>-15.499999999999993 2.599999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-15.499999999999993_3.8999999999999986</name>
+  <pose>-15.499999999999993 3.8999999999999986 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-15.499999999999993_5.199999999999999</name>
+  <pose>-15.499999999999993 5.199999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-15.499999999999993_6.499999999999998</name>
+  <pose>-15.499999999999993 6.499999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-14.399999999999991_-6.5</name>
+  <pose>-14.399999999999991 -6.5 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-14.399999999999991_-5.2</name>
+  <pose>-14.399999999999991 -5.2 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-14.399999999999991_-3.9000000000000004</name>
+  <pose>-14.399999999999991 -3.9000000000000004 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-14.399999999999991_-2.6000000000000005</name>
+  <pose>-14.399999999999991 -2.6000000000000005 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-14.399999999999991_-1.3000000000000007</name>
+  <pose>-14.399999999999991 -1.3000000000000007 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-14.399999999999991_-8.881784197001252e-16</name>
+  <pose>-14.399999999999991 -8.881784197001252e-16 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-14.399999999999991_1.299999999999999</name>
+  <pose>-14.399999999999991 1.299999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-14.399999999999991_2.599999999999998</name>
+  <pose>-14.399999999999991 2.599999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-14.399999999999991_3.8999999999999986</name>
+  <pose>-14.399999999999991 3.8999999999999986 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-14.399999999999991_5.199999999999999</name>
+  <pose>-14.399999999999991 5.199999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-14.399999999999991_6.499999999999998</name>
+  <pose>-14.399999999999991 6.499999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-13.29999999999999_-6.5</name>
+  <pose>-13.29999999999999 -6.5 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-13.29999999999999_-5.2</name>
+  <pose>-13.29999999999999 -5.2 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-13.29999999999999_-3.9000000000000004</name>
+  <pose>-13.29999999999999 -3.9000000000000004 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-13.29999999999999_-2.6000000000000005</name>
+  <pose>-13.29999999999999 -2.6000000000000005 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-13.29999999999999_-1.3000000000000007</name>
+  <pose>-13.29999999999999 -1.3000000000000007 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-13.29999999999999_-8.881784197001252e-16</name>
+  <pose>-13.29999999999999 -8.881784197001252e-16 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-13.29999999999999_1.299999999999999</name>
+  <pose>-13.29999999999999 1.299999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-13.29999999999999_2.599999999999998</name>
+  <pose>-13.29999999999999 2.599999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-13.29999999999999_3.8999999999999986</name>
+  <pose>-13.29999999999999 3.8999999999999986 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-13.29999999999999_5.199999999999999</name>
+  <pose>-13.29999999999999 5.199999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-13.29999999999999_6.499999999999998</name>
+  <pose>-13.29999999999999 6.499999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-12.199999999999989_-6.5</name>
+  <pose>-12.199999999999989 -6.5 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-12.199999999999989_-5.2</name>
+  <pose>-12.199999999999989 -5.2 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-12.199999999999989_-3.9000000000000004</name>
+  <pose>-12.199999999999989 -3.9000000000000004 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-12.199999999999989_-2.6000000000000005</name>
+  <pose>-12.199999999999989 -2.6000000000000005 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-12.199999999999989_-1.3000000000000007</name>
+  <pose>-12.199999999999989 -1.3000000000000007 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-12.199999999999989_-8.881784197001252e-16</name>
+  <pose>-12.199999999999989 -8.881784197001252e-16 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-12.199999999999989_1.299999999999999</name>
+  <pose>-12.199999999999989 1.299999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-12.199999999999989_2.599999999999998</name>
+  <pose>-12.199999999999989 2.599999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-12.199999999999989_3.8999999999999986</name>
+  <pose>-12.199999999999989 3.8999999999999986 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-12.199999999999989_5.199999999999999</name>
+  <pose>-12.199999999999989 5.199999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-12.199999999999989_6.499999999999998</name>
+  <pose>-12.199999999999989 6.499999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-11.099999999999987_-6.5</name>
+  <pose>-11.099999999999987 -6.5 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-11.099999999999987_-5.2</name>
+  <pose>-11.099999999999987 -5.2 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-11.099999999999987_-3.9000000000000004</name>
+  <pose>-11.099999999999987 -3.9000000000000004 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-11.099999999999987_-2.6000000000000005</name>
+  <pose>-11.099999999999987 -2.6000000000000005 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-11.099999999999987_-1.3000000000000007</name>
+  <pose>-11.099999999999987 -1.3000000000000007 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-11.099999999999987_-8.881784197001252e-16</name>
+  <pose>-11.099999999999987 -8.881784197001252e-16 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-11.099999999999987_1.299999999999999</name>
+  <pose>-11.099999999999987 1.299999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-11.099999999999987_2.599999999999998</name>
+  <pose>-11.099999999999987 2.599999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-11.099999999999987_3.8999999999999986</name>
+  <pose>-11.099999999999987 3.8999999999999986 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-11.099999999999987_5.199999999999999</name>
+  <pose>-11.099999999999987 5.199999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-11.099999999999987_6.499999999999998</name>
+  <pose>-11.099999999999987 6.499999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-9.999999999999986_-6.5</name>
+  <pose>-9.999999999999986 -6.5 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-9.999999999999986_-5.2</name>
+  <pose>-9.999999999999986 -5.2 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-9.999999999999986_-3.9000000000000004</name>
+  <pose>-9.999999999999986 -3.9000000000000004 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-9.999999999999986_-2.6000000000000005</name>
+  <pose>-9.999999999999986 -2.6000000000000005 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-9.999999999999986_-1.3000000000000007</name>
+  <pose>-9.999999999999986 -1.3000000000000007 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-9.999999999999986_-8.881784197001252e-16</name>
+  <pose>-9.999999999999986 -8.881784197001252e-16 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-9.999999999999986_1.299999999999999</name>
+  <pose>-9.999999999999986 1.299999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-9.999999999999986_2.599999999999998</name>
+  <pose>-9.999999999999986 2.599999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-9.999999999999986_3.8999999999999986</name>
+  <pose>-9.999999999999986 3.8999999999999986 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-9.999999999999986_5.199999999999999</name>
+  <pose>-9.999999999999986 5.199999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-9.999999999999986_6.499999999999998</name>
+  <pose>-9.999999999999986 6.499999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-8.899999999999984_-6.5</name>
+  <pose>-8.899999999999984 -6.5 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-8.899999999999984_-5.2</name>
+  <pose>-8.899999999999984 -5.2 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-8.899999999999984_-3.9000000000000004</name>
+  <pose>-8.899999999999984 -3.9000000000000004 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-8.899999999999984_-2.6000000000000005</name>
+  <pose>-8.899999999999984 -2.6000000000000005 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-8.899999999999984_-1.3000000000000007</name>
+  <pose>-8.899999999999984 -1.3000000000000007 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-8.899999999999984_-8.881784197001252e-16</name>
+  <pose>-8.899999999999984 -8.881784197001252e-16 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-8.899999999999984_1.299999999999999</name>
+  <pose>-8.899999999999984 1.299999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-8.899999999999984_2.599999999999998</name>
+  <pose>-8.899999999999984 2.599999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-8.899999999999984_3.8999999999999986</name>
+  <pose>-8.899999999999984 3.8999999999999986 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-8.899999999999984_5.199999999999999</name>
+  <pose>-8.899999999999984 5.199999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-8.899999999999984_6.499999999999998</name>
+  <pose>-8.899999999999984 6.499999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-7.799999999999983_-6.5</name>
+  <pose>-7.799999999999983 -6.5 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-7.799999999999983_-5.2</name>
+  <pose>-7.799999999999983 -5.2 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-7.799999999999983_-3.9000000000000004</name>
+  <pose>-7.799999999999983 -3.9000000000000004 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-7.799999999999983_-2.6000000000000005</name>
+  <pose>-7.799999999999983 -2.6000000000000005 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-7.799999999999983_-1.3000000000000007</name>
+  <pose>-7.799999999999983 -1.3000000000000007 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-7.799999999999983_-8.881784197001252e-16</name>
+  <pose>-7.799999999999983 -8.881784197001252e-16 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-7.799999999999983_1.299999999999999</name>
+  <pose>-7.799999999999983 1.299999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-7.799999999999983_2.599999999999998</name>
+  <pose>-7.799999999999983 2.599999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-7.799999999999983_3.8999999999999986</name>
+  <pose>-7.799999999999983 3.8999999999999986 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-7.799999999999983_5.199999999999999</name>
+  <pose>-7.799999999999983 5.199999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-7.799999999999983_6.499999999999998</name>
+  <pose>-7.799999999999983 6.499999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-6.6999999999999815_-6.5</name>
+  <pose>-6.6999999999999815 -6.5 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-6.6999999999999815_-5.2</name>
+  <pose>-6.6999999999999815 -5.2 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-6.6999999999999815_-3.9000000000000004</name>
+  <pose>-6.6999999999999815 -3.9000000000000004 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-6.6999999999999815_-2.6000000000000005</name>
+  <pose>-6.6999999999999815 -2.6000000000000005 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-6.6999999999999815_-1.3000000000000007</name>
+  <pose>-6.6999999999999815 -1.3000000000000007 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-6.6999999999999815_-8.881784197001252e-16</name>
+  <pose>-6.6999999999999815 -8.881784197001252e-16 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-6.6999999999999815_1.299999999999999</name>
+  <pose>-6.6999999999999815 1.299999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-6.6999999999999815_2.599999999999998</name>
+  <pose>-6.6999999999999815 2.599999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-6.6999999999999815_3.8999999999999986</name>
+  <pose>-6.6999999999999815 3.8999999999999986 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-6.6999999999999815_5.199999999999999</name>
+  <pose>-6.6999999999999815 5.199999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-6.6999999999999815_6.499999999999998</name>
+  <pose>-6.6999999999999815 6.499999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-5.59999999999998_-6.5</name>
+  <pose>-5.59999999999998 -6.5 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-5.59999999999998_-5.2</name>
+  <pose>-5.59999999999998 -5.2 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-5.59999999999998_-3.9000000000000004</name>
+  <pose>-5.59999999999998 -3.9000000000000004 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-5.59999999999998_-2.6000000000000005</name>
+  <pose>-5.59999999999998 -2.6000000000000005 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-5.59999999999998_-1.3000000000000007</name>
+  <pose>-5.59999999999998 -1.3000000000000007 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-5.59999999999998_-8.881784197001252e-16</name>
+  <pose>-5.59999999999998 -8.881784197001252e-16 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-5.59999999999998_1.299999999999999</name>
+  <pose>-5.59999999999998 1.299999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-5.59999999999998_2.599999999999998</name>
+  <pose>-5.59999999999998 2.599999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-5.59999999999998_3.8999999999999986</name>
+  <pose>-5.59999999999998 3.8999999999999986 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-5.59999999999998_5.199999999999999</name>
+  <pose>-5.59999999999998 5.199999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-5.59999999999998_6.499999999999998</name>
+  <pose>-5.59999999999998 6.499999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-4.499999999999979_-6.5</name>
+  <pose>-4.499999999999979 -6.5 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-4.499999999999979_-5.2</name>
+  <pose>-4.499999999999979 -5.2 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-4.499999999999979_-3.9000000000000004</name>
+  <pose>-4.499999999999979 -3.9000000000000004 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-4.499999999999979_-2.6000000000000005</name>
+  <pose>-4.499999999999979 -2.6000000000000005 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-4.499999999999979_-1.3000000000000007</name>
+  <pose>-4.499999999999979 -1.3000000000000007 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-4.499999999999979_-8.881784197001252e-16</name>
+  <pose>-4.499999999999979 -8.881784197001252e-16 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-4.499999999999979_1.299999999999999</name>
+  <pose>-4.499999999999979 1.299999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-4.499999999999979_2.599999999999998</name>
+  <pose>-4.499999999999979 2.599999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-4.499999999999979_3.8999999999999986</name>
+  <pose>-4.499999999999979 3.8999999999999986 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-4.499999999999979_5.199999999999999</name>
+  <pose>-4.499999999999979 5.199999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-4.499999999999979_6.499999999999998</name>
+  <pose>-4.499999999999979 6.499999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-3.3999999999999773_-6.5</name>
+  <pose>-3.3999999999999773 -6.5 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-3.3999999999999773_-5.2</name>
+  <pose>-3.3999999999999773 -5.2 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-3.3999999999999773_-3.9000000000000004</name>
+  <pose>-3.3999999999999773 -3.9000000000000004 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-3.3999999999999773_-2.6000000000000005</name>
+  <pose>-3.3999999999999773 -2.6000000000000005 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-3.3999999999999773_-1.3000000000000007</name>
+  <pose>-3.3999999999999773 -1.3000000000000007 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-3.3999999999999773_-8.881784197001252e-16</name>
+  <pose>-3.3999999999999773 -8.881784197001252e-16 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-3.3999999999999773_1.299999999999999</name>
+  <pose>-3.3999999999999773 1.299999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-3.3999999999999773_2.599999999999998</name>
+  <pose>-3.3999999999999773 2.599999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-3.3999999999999773_3.8999999999999986</name>
+  <pose>-3.3999999999999773 3.8999999999999986 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-3.3999999999999773_5.199999999999999</name>
+  <pose>-3.3999999999999773 5.199999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-3.3999999999999773_6.499999999999998</name>
+  <pose>-3.3999999999999773 6.499999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-2.299999999999976_-6.5</name>
+  <pose>-2.299999999999976 -6.5 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-2.299999999999976_-5.2</name>
+  <pose>-2.299999999999976 -5.2 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-2.299999999999976_-3.9000000000000004</name>
+  <pose>-2.299999999999976 -3.9000000000000004 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-2.299999999999976_-2.6000000000000005</name>
+  <pose>-2.299999999999976 -2.6000000000000005 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-2.299999999999976_-1.3000000000000007</name>
+  <pose>-2.299999999999976 -1.3000000000000007 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-2.299999999999976_-8.881784197001252e-16</name>
+  <pose>-2.299999999999976 -8.881784197001252e-16 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-2.299999999999976_1.299999999999999</name>
+  <pose>-2.299999999999976 1.299999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-2.299999999999976_2.599999999999998</name>
+  <pose>-2.299999999999976 2.599999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-2.299999999999976_3.8999999999999986</name>
+  <pose>-2.299999999999976 3.8999999999999986 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-2.299999999999976_5.199999999999999</name>
+  <pose>-2.299999999999976 5.199999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-2.299999999999976_6.499999999999998</name>
+  <pose>-2.299999999999976 6.499999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-1.1999999999999744_-6.5</name>
+  <pose>-1.1999999999999744 -6.5 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-1.1999999999999744_-5.2</name>
+  <pose>-1.1999999999999744 -5.2 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-1.1999999999999744_-3.9000000000000004</name>
+  <pose>-1.1999999999999744 -3.9000000000000004 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-1.1999999999999744_-2.6000000000000005</name>
+  <pose>-1.1999999999999744 -2.6000000000000005 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-1.1999999999999744_-1.3000000000000007</name>
+  <pose>-1.1999999999999744 -1.3000000000000007 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-1.1999999999999744_-8.881784197001252e-16</name>
+  <pose>-1.1999999999999744 -8.881784197001252e-16 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-1.1999999999999744_1.299999999999999</name>
+  <pose>-1.1999999999999744 1.299999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-1.1999999999999744_2.599999999999998</name>
+  <pose>-1.1999999999999744 2.599999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-1.1999999999999744_3.8999999999999986</name>
+  <pose>-1.1999999999999744 3.8999999999999986 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-1.1999999999999744_5.199999999999999</name>
+  <pose>-1.1999999999999744 5.199999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-1.1999999999999744_6.499999999999998</name>
+  <pose>-1.1999999999999744 6.499999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-0.099999999999973_-6.5</name>
+  <pose>-0.099999999999973 -6.5 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-0.099999999999973_-5.2</name>
+  <pose>-0.099999999999973 -5.2 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-0.099999999999973_-3.9000000000000004</name>
+  <pose>-0.099999999999973 -3.9000000000000004 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-0.099999999999973_-2.6000000000000005</name>
+  <pose>-0.099999999999973 -2.6000000000000005 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-0.099999999999973_-1.3000000000000007</name>
+  <pose>-0.099999999999973 -1.3000000000000007 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-0.099999999999973_-8.881784197001252e-16</name>
+  <pose>-0.099999999999973 -8.881784197001252e-16 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-0.099999999999973_1.299999999999999</name>
+  <pose>-0.099999999999973 1.299999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-0.099999999999973_2.599999999999998</name>
+  <pose>-0.099999999999973 2.599999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-0.099999999999973_3.8999999999999986</name>
+  <pose>-0.099999999999973 3.8999999999999986 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-0.099999999999973_5.199999999999999</name>
+  <pose>-0.099999999999973 5.199999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_-0.099999999999973_6.499999999999998</name>
+  <pose>-0.099999999999973 6.499999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_1.0000000000000284_-6.5</name>
+  <pose>1.0000000000000284 -6.5 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_1.0000000000000284_-5.2</name>
+  <pose>1.0000000000000284 -5.2 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_1.0000000000000284_-3.9000000000000004</name>
+  <pose>1.0000000000000284 -3.9000000000000004 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_1.0000000000000284_-2.6000000000000005</name>
+  <pose>1.0000000000000284 -2.6000000000000005 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_1.0000000000000284_-1.3000000000000007</name>
+  <pose>1.0000000000000284 -1.3000000000000007 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_1.0000000000000284_-8.881784197001252e-16</name>
+  <pose>1.0000000000000284 -8.881784197001252e-16 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_1.0000000000000284_1.299999999999999</name>
+  <pose>1.0000000000000284 1.299999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_1.0000000000000284_2.599999999999998</name>
+  <pose>1.0000000000000284 2.599999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_1.0000000000000284_3.8999999999999986</name>
+  <pose>1.0000000000000284 3.8999999999999986 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_1.0000000000000284_5.199999999999999</name>
+  <pose>1.0000000000000284 5.199999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_1.0000000000000284_6.499999999999998</name>
+  <pose>1.0000000000000284 6.499999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_2.10000000000003_-6.5</name>
+  <pose>2.10000000000003 -6.5 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_2.10000000000003_-5.2</name>
+  <pose>2.10000000000003 -5.2 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_2.10000000000003_-3.9000000000000004</name>
+  <pose>2.10000000000003 -3.9000000000000004 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_2.10000000000003_-2.6000000000000005</name>
+  <pose>2.10000000000003 -2.6000000000000005 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_2.10000000000003_-1.3000000000000007</name>
+  <pose>2.10000000000003 -1.3000000000000007 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_2.10000000000003_-8.881784197001252e-16</name>
+  <pose>2.10000000000003 -8.881784197001252e-16 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_2.10000000000003_1.299999999999999</name>
+  <pose>2.10000000000003 1.299999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_2.10000000000003_2.599999999999998</name>
+  <pose>2.10000000000003 2.599999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_2.10000000000003_3.8999999999999986</name>
+  <pose>2.10000000000003 3.8999999999999986 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_2.10000000000003_5.199999999999999</name>
+  <pose>2.10000000000003 5.199999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_2.10000000000003_6.499999999999998</name>
+  <pose>2.10000000000003 6.499999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_3.2000000000000313_-6.5</name>
+  <pose>3.2000000000000313 -6.5 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_3.2000000000000313_-5.2</name>
+  <pose>3.2000000000000313 -5.2 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_3.2000000000000313_-3.9000000000000004</name>
+  <pose>3.2000000000000313 -3.9000000000000004 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_3.2000000000000313_-2.6000000000000005</name>
+  <pose>3.2000000000000313 -2.6000000000000005 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_3.2000000000000313_-1.3000000000000007</name>
+  <pose>3.2000000000000313 -1.3000000000000007 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_3.2000000000000313_-8.881784197001252e-16</name>
+  <pose>3.2000000000000313 -8.881784197001252e-16 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_3.2000000000000313_1.299999999999999</name>
+  <pose>3.2000000000000313 1.299999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_3.2000000000000313_2.599999999999998</name>
+  <pose>3.2000000000000313 2.599999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_3.2000000000000313_3.8999999999999986</name>
+  <pose>3.2000000000000313 3.8999999999999986 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_3.2000000000000313_5.199999999999999</name>
+  <pose>3.2000000000000313 5.199999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_3.2000000000000313_6.499999999999998</name>
+  <pose>3.2000000000000313 6.499999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_4.300000000000033_-6.5</name>
+  <pose>4.300000000000033 -6.5 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_4.300000000000033_-5.2</name>
+  <pose>4.300000000000033 -5.2 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_4.300000000000033_-3.9000000000000004</name>
+  <pose>4.300000000000033 -3.9000000000000004 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_4.300000000000033_-2.6000000000000005</name>
+  <pose>4.300000000000033 -2.6000000000000005 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_4.300000000000033_-1.3000000000000007</name>
+  <pose>4.300000000000033 -1.3000000000000007 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_4.300000000000033_-8.881784197001252e-16</name>
+  <pose>4.300000000000033 -8.881784197001252e-16 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_4.300000000000033_1.299999999999999</name>
+  <pose>4.300000000000033 1.299999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_4.300000000000033_2.599999999999998</name>
+  <pose>4.300000000000033 2.599999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_4.300000000000033_3.8999999999999986</name>
+  <pose>4.300000000000033 3.8999999999999986 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_4.300000000000033_5.199999999999999</name>
+  <pose>4.300000000000033 5.199999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_4.300000000000033_6.499999999999998</name>
+  <pose>4.300000000000033 6.499999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_5.400000000000034_-6.5</name>
+  <pose>5.400000000000034 -6.5 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_5.400000000000034_-5.2</name>
+  <pose>5.400000000000034 -5.2 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_5.400000000000034_-3.9000000000000004</name>
+  <pose>5.400000000000034 -3.9000000000000004 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_5.400000000000034_-2.6000000000000005</name>
+  <pose>5.400000000000034 -2.6000000000000005 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_5.400000000000034_-1.3000000000000007</name>
+  <pose>5.400000000000034 -1.3000000000000007 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_5.400000000000034_-8.881784197001252e-16</name>
+  <pose>5.400000000000034 -8.881784197001252e-16 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_5.400000000000034_1.299999999999999</name>
+  <pose>5.400000000000034 1.299999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_5.400000000000034_2.599999999999998</name>
+  <pose>5.400000000000034 2.599999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_5.400000000000034_3.8999999999999986</name>
+  <pose>5.400000000000034 3.8999999999999986 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_5.400000000000034_5.199999999999999</name>
+  <pose>5.400000000000034 5.199999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_5.400000000000034_6.499999999999998</name>
+  <pose>5.400000000000034 6.499999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_6.5000000000000355_-6.5</name>
+  <pose>6.5000000000000355 -6.5 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_6.5000000000000355_-5.2</name>
+  <pose>6.5000000000000355 -5.2 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_6.5000000000000355_-3.9000000000000004</name>
+  <pose>6.5000000000000355 -3.9000000000000004 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_6.5000000000000355_-2.6000000000000005</name>
+  <pose>6.5000000000000355 -2.6000000000000005 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_6.5000000000000355_-1.3000000000000007</name>
+  <pose>6.5000000000000355 -1.3000000000000007 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_6.5000000000000355_-8.881784197001252e-16</name>
+  <pose>6.5000000000000355 -8.881784197001252e-16 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_6.5000000000000355_1.299999999999999</name>
+  <pose>6.5000000000000355 1.299999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_6.5000000000000355_2.599999999999998</name>
+  <pose>6.5000000000000355 2.599999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_6.5000000000000355_3.8999999999999986</name>
+  <pose>6.5000000000000355 3.8999999999999986 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_6.5000000000000355_5.199999999999999</name>
+  <pose>6.5000000000000355 5.199999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_6.5000000000000355_6.499999999999998</name>
+  <pose>6.5000000000000355 6.499999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_7.600000000000037_-6.5</name>
+  <pose>7.600000000000037 -6.5 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_7.600000000000037_-5.2</name>
+  <pose>7.600000000000037 -5.2 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_7.600000000000037_-3.9000000000000004</name>
+  <pose>7.600000000000037 -3.9000000000000004 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_7.600000000000037_-2.6000000000000005</name>
+  <pose>7.600000000000037 -2.6000000000000005 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_7.600000000000037_-1.3000000000000007</name>
+  <pose>7.600000000000037 -1.3000000000000007 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_7.600000000000037_-8.881784197001252e-16</name>
+  <pose>7.600000000000037 -8.881784197001252e-16 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_7.600000000000037_1.299999999999999</name>
+  <pose>7.600000000000037 1.299999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_7.600000000000037_2.599999999999998</name>
+  <pose>7.600000000000037 2.599999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_7.600000000000037_3.8999999999999986</name>
+  <pose>7.600000000000037 3.8999999999999986 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_7.600000000000037_5.199999999999999</name>
+  <pose>7.600000000000037 5.199999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_7.600000000000037_6.499999999999998</name>
+  <pose>7.600000000000037 6.499999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_8.700000000000038_-6.5</name>
+  <pose>8.700000000000038 -6.5 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_8.700000000000038_-5.2</name>
+  <pose>8.700000000000038 -5.2 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_8.700000000000038_-3.9000000000000004</name>
+  <pose>8.700000000000038 -3.9000000000000004 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_8.700000000000038_-2.6000000000000005</name>
+  <pose>8.700000000000038 -2.6000000000000005 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_8.700000000000038_-1.3000000000000007</name>
+  <pose>8.700000000000038 -1.3000000000000007 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_8.700000000000038_-8.881784197001252e-16</name>
+  <pose>8.700000000000038 -8.881784197001252e-16 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_8.700000000000038_1.299999999999999</name>
+  <pose>8.700000000000038 1.299999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_8.700000000000038_2.599999999999998</name>
+  <pose>8.700000000000038 2.599999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_8.700000000000038_3.8999999999999986</name>
+  <pose>8.700000000000038 3.8999999999999986 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_8.700000000000038_5.199999999999999</name>
+  <pose>8.700000000000038 5.199999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_8.700000000000038_6.499999999999998</name>
+  <pose>8.700000000000038 6.499999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_9.80000000000004_-6.5</name>
+  <pose>9.80000000000004 -6.5 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_9.80000000000004_-5.2</name>
+  <pose>9.80000000000004 -5.2 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_9.80000000000004_-3.9000000000000004</name>
+  <pose>9.80000000000004 -3.9000000000000004 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_9.80000000000004_-2.6000000000000005</name>
+  <pose>9.80000000000004 -2.6000000000000005 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_9.80000000000004_-1.3000000000000007</name>
+  <pose>9.80000000000004 -1.3000000000000007 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_9.80000000000004_-8.881784197001252e-16</name>
+  <pose>9.80000000000004 -8.881784197001252e-16 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_9.80000000000004_1.299999999999999</name>
+  <pose>9.80000000000004 1.299999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_9.80000000000004_2.599999999999998</name>
+  <pose>9.80000000000004 2.599999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_9.80000000000004_3.8999999999999986</name>
+  <pose>9.80000000000004 3.8999999999999986 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_9.80000000000004_5.199999999999999</name>
+  <pose>9.80000000000004 5.199999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_9.80000000000004_6.499999999999998</name>
+  <pose>9.80000000000004 6.499999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_10.900000000000041_-6.5</name>
+  <pose>10.900000000000041 -6.5 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_10.900000000000041_-5.2</name>
+  <pose>10.900000000000041 -5.2 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_10.900000000000041_-3.9000000000000004</name>
+  <pose>10.900000000000041 -3.9000000000000004 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_10.900000000000041_-2.6000000000000005</name>
+  <pose>10.900000000000041 -2.6000000000000005 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_10.900000000000041_-1.3000000000000007</name>
+  <pose>10.900000000000041 -1.3000000000000007 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_10.900000000000041_-8.881784197001252e-16</name>
+  <pose>10.900000000000041 -8.881784197001252e-16 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_10.900000000000041_1.299999999999999</name>
+  <pose>10.900000000000041 1.299999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_10.900000000000041_2.599999999999998</name>
+  <pose>10.900000000000041 2.599999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_10.900000000000041_3.8999999999999986</name>
+  <pose>10.900000000000041 3.8999999999999986 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_10.900000000000041_5.199999999999999</name>
+  <pose>10.900000000000041 5.199999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_10.900000000000041_6.499999999999998</name>
+  <pose>10.900000000000041 6.499999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_12.000000000000043_-6.5</name>
+  <pose>12.000000000000043 -6.5 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_12.000000000000043_-5.2</name>
+  <pose>12.000000000000043 -5.2 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_12.000000000000043_-3.9000000000000004</name>
+  <pose>12.000000000000043 -3.9000000000000004 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_12.000000000000043_-2.6000000000000005</name>
+  <pose>12.000000000000043 -2.6000000000000005 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_12.000000000000043_-1.3000000000000007</name>
+  <pose>12.000000000000043 -1.3000000000000007 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_12.000000000000043_-8.881784197001252e-16</name>
+  <pose>12.000000000000043 -8.881784197001252e-16 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_12.000000000000043_1.299999999999999</name>
+  <pose>12.000000000000043 1.299999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_12.000000000000043_2.599999999999998</name>
+  <pose>12.000000000000043 2.599999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_12.000000000000043_3.8999999999999986</name>
+  <pose>12.000000000000043 3.8999999999999986 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_12.000000000000043_5.199999999999999</name>
+  <pose>12.000000000000043 5.199999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_12.000000000000043_6.499999999999998</name>
+  <pose>12.000000000000043 6.499999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_13.100000000000044_-6.5</name>
+  <pose>13.100000000000044 -6.5 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_13.100000000000044_-5.2</name>
+  <pose>13.100000000000044 -5.2 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_13.100000000000044_-3.9000000000000004</name>
+  <pose>13.100000000000044 -3.9000000000000004 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_13.100000000000044_-2.6000000000000005</name>
+  <pose>13.100000000000044 -2.6000000000000005 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_13.100000000000044_-1.3000000000000007</name>
+  <pose>13.100000000000044 -1.3000000000000007 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_13.100000000000044_-8.881784197001252e-16</name>
+  <pose>13.100000000000044 -8.881784197001252e-16 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_13.100000000000044_1.299999999999999</name>
+  <pose>13.100000000000044 1.299999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_13.100000000000044_2.599999999999998</name>
+  <pose>13.100000000000044 2.599999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_13.100000000000044_3.8999999999999986</name>
+  <pose>13.100000000000044 3.8999999999999986 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_13.100000000000044_5.199999999999999</name>
+  <pose>13.100000000000044 5.199999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_13.100000000000044_6.499999999999998</name>
+  <pose>13.100000000000044 6.499999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_14.200000000000045_-6.5</name>
+  <pose>14.200000000000045 -6.5 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_14.200000000000045_-5.2</name>
+  <pose>14.200000000000045 -5.2 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_14.200000000000045_-3.9000000000000004</name>
+  <pose>14.200000000000045 -3.9000000000000004 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_14.200000000000045_-2.6000000000000005</name>
+  <pose>14.200000000000045 -2.6000000000000005 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_14.200000000000045_-1.3000000000000007</name>
+  <pose>14.200000000000045 -1.3000000000000007 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_14.200000000000045_-8.881784197001252e-16</name>
+  <pose>14.200000000000045 -8.881784197001252e-16 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_14.200000000000045_1.299999999999999</name>
+  <pose>14.200000000000045 1.299999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_14.200000000000045_2.599999999999998</name>
+  <pose>14.200000000000045 2.599999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_14.200000000000045_3.8999999999999986</name>
+  <pose>14.200000000000045 3.8999999999999986 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_14.200000000000045_5.199999999999999</name>
+  <pose>14.200000000000045 5.199999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_14.200000000000045_6.499999999999998</name>
+  <pose>14.200000000000045 6.499999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_15.300000000000047_-6.5</name>
+  <pose>15.300000000000047 -6.5 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_15.300000000000047_-5.2</name>
+  <pose>15.300000000000047 -5.2 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_15.300000000000047_-3.9000000000000004</name>
+  <pose>15.300000000000047 -3.9000000000000004 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_15.300000000000047_-2.6000000000000005</name>
+  <pose>15.300000000000047 -2.6000000000000005 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_15.300000000000047_-1.3000000000000007</name>
+  <pose>15.300000000000047 -1.3000000000000007 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_15.300000000000047_-8.881784197001252e-16</name>
+  <pose>15.300000000000047 -8.881784197001252e-16 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_15.300000000000047_1.299999999999999</name>
+  <pose>15.300000000000047 1.299999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_15.300000000000047_2.599999999999998</name>
+  <pose>15.300000000000047 2.599999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_15.300000000000047_3.8999999999999986</name>
+  <pose>15.300000000000047 3.8999999999999986 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_15.300000000000047_5.199999999999999</name>
+  <pose>15.300000000000047 5.199999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_15.300000000000047_6.499999999999998</name>
+  <pose>15.300000000000047 6.499999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_16.40000000000005_-6.5</name>
+  <pose>16.40000000000005 -6.5 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_16.40000000000005_-5.2</name>
+  <pose>16.40000000000005 -5.2 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_16.40000000000005_-3.9000000000000004</name>
+  <pose>16.40000000000005 -3.9000000000000004 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_16.40000000000005_-2.6000000000000005</name>
+  <pose>16.40000000000005 -2.6000000000000005 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_16.40000000000005_-1.3000000000000007</name>
+  <pose>16.40000000000005 -1.3000000000000007 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_16.40000000000005_-8.881784197001252e-16</name>
+  <pose>16.40000000000005 -8.881784197001252e-16 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_16.40000000000005_1.299999999999999</name>
+  <pose>16.40000000000005 1.299999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_16.40000000000005_2.599999999999998</name>
+  <pose>16.40000000000005 2.599999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_16.40000000000005_3.8999999999999986</name>
+  <pose>16.40000000000005 3.8999999999999986 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_16.40000000000005_5.199999999999999</name>
+  <pose>16.40000000000005 5.199999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_16.40000000000005_6.499999999999998</name>
+  <pose>16.40000000000005 6.499999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_17.50000000000005_-6.5</name>
+  <pose>17.50000000000005 -6.5 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_17.50000000000005_-5.2</name>
+  <pose>17.50000000000005 -5.2 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_17.50000000000005_-3.9000000000000004</name>
+  <pose>17.50000000000005 -3.9000000000000004 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_17.50000000000005_-2.6000000000000005</name>
+  <pose>17.50000000000005 -2.6000000000000005 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_17.50000000000005_-1.3000000000000007</name>
+  <pose>17.50000000000005 -1.3000000000000007 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_17.50000000000005_-8.881784197001252e-16</name>
+  <pose>17.50000000000005 -8.881784197001252e-16 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_17.50000000000005_1.299999999999999</name>
+  <pose>17.50000000000005 1.299999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_17.50000000000005_2.599999999999998</name>
+  <pose>17.50000000000005 2.599999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_17.50000000000005_3.8999999999999986</name>
+  <pose>17.50000000000005 3.8999999999999986 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_17.50000000000005_5.199999999999999</name>
+  <pose>17.50000000000005 5.199999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_17.50000000000005_6.499999999999998</name>
+  <pose>17.50000000000005 6.499999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_18.60000000000005_-6.5</name>
+  <pose>18.60000000000005 -6.5 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_18.60000000000005_-5.2</name>
+  <pose>18.60000000000005 -5.2 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_18.60000000000005_-3.9000000000000004</name>
+  <pose>18.60000000000005 -3.9000000000000004 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_18.60000000000005_-2.6000000000000005</name>
+  <pose>18.60000000000005 -2.6000000000000005 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_18.60000000000005_-1.3000000000000007</name>
+  <pose>18.60000000000005 -1.3000000000000007 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_18.60000000000005_-8.881784197001252e-16</name>
+  <pose>18.60000000000005 -8.881784197001252e-16 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_18.60000000000005_1.299999999999999</name>
+  <pose>18.60000000000005 1.299999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_18.60000000000005_2.599999999999998</name>
+  <pose>18.60000000000005 2.599999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_18.60000000000005_3.8999999999999986</name>
+  <pose>18.60000000000005 3.8999999999999986 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_18.60000000000005_5.199999999999999</name>
+  <pose>18.60000000000005 5.199999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_18.60000000000005_6.499999999999998</name>
+  <pose>18.60000000000005 6.499999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_19.700000000000053_-6.5</name>
+  <pose>19.700000000000053 -6.5 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_19.700000000000053_-5.2</name>
+  <pose>19.700000000000053 -5.2 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_19.700000000000053_-3.9000000000000004</name>
+  <pose>19.700000000000053 -3.9000000000000004 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_19.700000000000053_-2.6000000000000005</name>
+  <pose>19.700000000000053 -2.6000000000000005 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_19.700000000000053_-1.3000000000000007</name>
+  <pose>19.700000000000053 -1.3000000000000007 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_19.700000000000053_-8.881784197001252e-16</name>
+  <pose>19.700000000000053 -8.881784197001252e-16 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_19.700000000000053_1.299999999999999</name>
+  <pose>19.700000000000053 1.299999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_19.700000000000053_2.599999999999998</name>
+  <pose>19.700000000000053 2.599999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_19.700000000000053_3.8999999999999986</name>
+  <pose>19.700000000000053 3.8999999999999986 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_19.700000000000053_5.199999999999999</name>
+  <pose>19.700000000000053 5.199999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_19.700000000000053_6.499999999999998</name>
+  <pose>19.700000000000053 6.499999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_20.800000000000054_-6.5</name>
+  <pose>20.800000000000054 -6.5 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_20.800000000000054_-5.2</name>
+  <pose>20.800000000000054 -5.2 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_20.800000000000054_-3.9000000000000004</name>
+  <pose>20.800000000000054 -3.9000000000000004 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_20.800000000000054_-2.6000000000000005</name>
+  <pose>20.800000000000054 -2.6000000000000005 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_20.800000000000054_-1.3000000000000007</name>
+  <pose>20.800000000000054 -1.3000000000000007 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_20.800000000000054_-8.881784197001252e-16</name>
+  <pose>20.800000000000054 -8.881784197001252e-16 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_20.800000000000054_1.299999999999999</name>
+  <pose>20.800000000000054 1.299999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_20.800000000000054_2.599999999999998</name>
+  <pose>20.800000000000054 2.599999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_20.800000000000054_3.8999999999999986</name>
+  <pose>20.800000000000054 3.8999999999999986 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_20.800000000000054_5.199999999999999</name>
+  <pose>20.800000000000054 5.199999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_20.800000000000054_6.499999999999998</name>
+  <pose>20.800000000000054 6.499999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_21.900000000000055_-6.5</name>
+  <pose>21.900000000000055 -6.5 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_21.900000000000055_-5.2</name>
+  <pose>21.900000000000055 -5.2 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_21.900000000000055_-3.9000000000000004</name>
+  <pose>21.900000000000055 -3.9000000000000004 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_21.900000000000055_-2.6000000000000005</name>
+  <pose>21.900000000000055 -2.6000000000000005 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_21.900000000000055_-1.3000000000000007</name>
+  <pose>21.900000000000055 -1.3000000000000007 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_21.900000000000055_-8.881784197001252e-16</name>
+  <pose>21.900000000000055 -8.881784197001252e-16 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_21.900000000000055_1.299999999999999</name>
+  <pose>21.900000000000055 1.299999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_21.900000000000055_2.599999999999998</name>
+  <pose>21.900000000000055 2.599999999999998 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_21.900000000000055_3.8999999999999986</name>
+  <pose>21.900000000000055 3.8999999999999986 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_21.900000000000055_5.199999999999999</name>
+  <pose>21.900000000000055 5.199999999999999 0 0 0 0</pose>
+</include>
+
+
+<include>
+  <uri>model://pillar</uri>
+  <name>pillar_21.900000000000055_6.499999999999998</name>
+  <pose>21.900000000000055 6.499999999999998 0 0 0 0</pose>
+</include>
+    
+    <static>1</static>
+  </model>
+</sdf>
