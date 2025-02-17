@@ -33,22 +33,27 @@ if(BUILD_TESTING)
 endif()
 
 install(
-  DIRECTORY config description launch worlds
+  DIRECTORY config description worlds launch include param
   DESTINATION share/${PROJECT_NAME}
 )
 
-install(DIRECTORY launch/
-  DESTINATION share/${PROJECT_NAME}/launch
-)
+# install(
+#   DIRECTORY config
+#   DESTINATION share/${PROJECT_NAME}/config
+# )
 
-# Optionally, install header files from the include directory.
-install(DIRECTORY include/
-  DESTINATION include
-)
+# install(DIRECTORY launch/
+#   DESTINATION share/${PROJECT_NAME}/launch
+# )
 
-install(
-  DIRECTORY param/
-  DESTINATION share/${PROJECT_NAME}/param
-)
+# # Optionally, install header files from the include directory.
+# install(DIRECTORY include/
+#   DESTINATION include
+# )
+
+# install(
+#   DIRECTORY param/
+#   DESTINATION share/${PROJECT_NAME}/param
+# )
 
 ament_package()
