@@ -1,0 +1,26 @@
+-- The C compiler identification is GNU 9.4.0
+-- The CXX compiler identification is GNU 9.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Searching required modules
+-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.1") 
+-- Checking for module 'libavcodec'
+--   Found libavcodec, version 58.54.100
+-- Checking for module 'libavutil'
+--   Found libavutil, version 56.31.100
+-- Checking for module 'libswscale'
+--   Found libswscale, version 5.5.100
+-- Checking for module 'libv4l2'
+--   No package 'libv4l2' found
+-- Configuring incomplete, errors occurred!
+See also "/root/robot_demo/src/robot_demo/build/usb_cam/CMakeFiles/CMakeOutput.log".

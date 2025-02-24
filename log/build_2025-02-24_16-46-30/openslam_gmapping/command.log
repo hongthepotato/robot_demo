@@ -1,0 +1,1 @@
+Invoking command in '/root/robot_demo/src/robot_demo/build/openslam_gmapping': /usr/bin/cmake /root/robot_demo/src/robot_demo/openslam_gmapping -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/root/robot_demo/src/robot_demo/install/openslam_gmapping

@@ -2,26 +2,39 @@ import os
 
 from launch import LaunchDescription
 from launch_ros.actions import Node
-from launch.actions import IncludeLaunchDescription
+from launch.actions import IncludeLaunchDescription, DeclareLaunchArgument
 from launch.launch_description_sources import PythonLaunchDescriptionSource
+from launch.conditions import IfCondition, UnlessCondition
+from launch.substitutions import LaunchConfiguration
 from ament_index_python.packages import get_package_share_directory
 
 def generate_launch_description():
     # Get the share directory for the robot_base package.
     robot_base_share = get_package_share_directory('robot_base')
     
+    # Declare a launch argument for simulation mode
+    sim_mode_arg = DeclareLaunchArgument(
+        'sim_mode',
+        default_value='false',
+        description='Set to "true" to run in simulation mode'
+    )
+    
+    # Reference to the sim_mode argument
+    sim_mode = LaunchConfiguration('sim_mode')
+    
     # Include the start_tf launch file (assumed to be migrated to ROS 2 as a Python launch file).
     start_tf_launch = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(os.path.join(robot_base_share, 'launch', 'start_tf.launch.py'))
     )
     
-    # Launch the rosserial node from the rosserial_python package.
+    # Conditionally include the rosserial node based on sim_mode
     rosserial_node = Node(
         package='rosserial_python',
         executable='serial_node',  # Adjust if the executable name is different in ROS 2.
         name='rosserial_stm32',
         output='screen',
-        arguments=['_port:=/dev/stm32', '_baud:=1000000']
+        arguments=['_port:=/dev/stm32', '_baud:=1000000'],
+        condition=UnlessCondition(sim_mode)
     )
     
     # Launch the robot_odom_time node from the robot_base package.
@@ -31,16 +44,6 @@ def generate_launch_description():
         name='robot_odom_time',
         output='screen'
     )
-    
-    # (Optional) The original ROS1 launch file commented out a node 'robot_odom'.
-    # If needed, add a node for robot_odom here.
-    #
-    # robot_odom_node = Node(
-    #     package='robot_base',
-    #     executable='robot_odom',
-    #     name='robot_odom',
-    #     output='screen'
-    # )
     
     # Launch the robot_cmd node from the robot_base package.
     robot_cmd_node = Node(
@@ -65,6 +68,7 @@ def generate_launch_description():
     
     # Create and return the complete LaunchDescription.
     return LaunchDescription([
+        sim_mode_arg,
         start_tf_launch,
         rosserial_node,
         robot_odom_time_node,

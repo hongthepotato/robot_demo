@@ -1,0 +1,4 @@
+Invoking command in '/root/robot_demo/src/robot_demo/build/rplidar_ros': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /root/robot_demo/src/robot_demo/build/rplidar_ros -- -j16 -l16
+Invoked command in '/root/robot_demo/src/robot_demo/build/rplidar_ros' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /root/robot_demo/src/robot_demo/build/rplidar_ros -- -j16 -l16
+Invoking command in '/root/robot_demo/src/robot_demo/build/rplidar_ros': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /root/robot_demo/src/robot_demo/build/rplidar_ros
+Invoked command in '/root/robot_demo/src/robot_demo/build/rplidar_ros' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /root/robot_demo/src/robot_demo/build/rplidar_ros

@@ -1,0 +1,28 @@
+-- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+-- Found std_srvs: 2.0.5 (/opt/ros/foxy/share/std_srvs/cmake)
+-- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /root/robot_demo/src/robot_demo/build/rplidar_ros
+[35m[1mScanning dependencies of target rplidarNodeClient[0m
+[35m[1mScanning dependencies of target rplidarNode[0m
+[  7%] [32mBuilding CXX object CMakeFiles/rplidarNodeClient.dir/src/client.cpp.o[0m
+[ 21%] [32mBuilding CXX object CMakeFiles/rplidarNode.dir/src/node.cpp.o[0m
+[ 21%] [32mBuilding CXX object CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/net_serial.cpp.o[0m
+[ 28%] [32mBuilding CXX object CMakeFiles/rplidarNode.dir/sdk/src/hal/thread.cpp.o[0m
+[ 42%] [32mBuilding CXX object CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/timer.cpp.o[0m
+[ 42%] [32mBuilding CXX object CMakeFiles/rplidarNode.dir/sdk/src/rplidar_driver.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/rplidarNode.dir/sdk/src/sl_lidar_driver.cpp.o[0m
+[ 64%] [32mBuilding CXX object CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/net_socket.cpp.o[0m
+[ 64%] [32mBuilding CXX object CMakeFiles/rplidarNode.dir/sdk/src/sl_udp_channel.cpp.o[0m
+[ 71%] [32mBuilding CXX object CMakeFiles/rplidarNode.dir/sdk/src/sl_serial_channel.cpp.o[0m
+[ 85%] [32mBuilding CXX object CMakeFiles/rplidarNode.dir/sdk/src/sl_tcp_channel.cpp.o[0m
+[ 85%] [32mBuilding CXX object CMakeFiles/rplidarNode.dir/sdk/src/sl_crc.cpp.o[0m

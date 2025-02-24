@@ -1,0 +1,1 @@
+Invoking command in '/root/robot_demo/src/robot_demo/build/rplidar_ros': /usr/bin/cmake /root/robot_demo/src/robot_demo/rplidar_ros -DCMAKE_INSTALL_PREFIX=/root/robot_demo/src/robot_demo/install/rplidar_ros

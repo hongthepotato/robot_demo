@@ -1,0 +1,1 @@
+Invoking command in '/root/robot_demo/src/robot_demo/build/my_msg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /root/robot_demo/src/robot_demo/my_msg -DCMAKE_INSTALL_PREFIX=/root/robot_demo/src/robot_demo/install/my_msg

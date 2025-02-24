@@ -1,0 +1,2 @@
+Invoking command in '/root/robot_demo/src/robot_demo/build/usb_cam': /usr/bin/cmake /root/robot_demo/src/robot_demo/usb_cam -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/root/robot_demo/src/robot_demo/install/usb_cam
+Invoked command in '/root/robot_demo/src/robot_demo/build/usb_cam' returned '1': /usr/bin/cmake /root/robot_demo/src/robot_demo/usb_cam -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/root/robot_demo/src/robot_demo/install/usb_cam

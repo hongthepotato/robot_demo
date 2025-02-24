@@ -1,0 +1,3 @@
+/root/robot_demo/src/robot_demo/build/my_msg/rosidl_adapter/my_msg:msg/DriverOdo.idl
+/root/robot_demo/src/robot_demo/build/my_msg/rosidl_adapter/my_msg:msg/IrState.idl
+/root/robot_demo/src/robot_demo/build/my_msg/rosidl_adapter/my_msg:msg/DriverControl.idl

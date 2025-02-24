@@ -1,0 +1,34 @@
+[0.054s] Invoking command in '/root/robot_demo/src/robot_demo/build/openslam_gmapping': /usr/bin/cmake /root/robot_demo/src/robot_demo/openslam_gmapping -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/root/robot_demo/src/robot_demo/install/openslam_gmapping
+[0.346s] -- The C compiler identification is GNU 9.4.0
+[0.628s] -- The CXX compiler identification is GNU 9.4.0
+[0.771s] -- Check for working C compiler: /usr/bin/cc
+[0.969s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.971s] -- Detecting C compiler ABI info
+[1.184s] -- Detecting C compiler ABI info - done
+[1.197s] -- Detecting C compile features
+[1.198s] -- Detecting C compile features - done
+[1.203s] -- Check for working CXX compiler: /usr/bin/c++
+[1.390s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[1.392s] -- Detecting CXX compiler ABI info
+[1.584s] -- Detecting CXX compiler ABI info - done
+[1.598s] -- Detecting CXX compile features
+[1.598s] -- Detecting CXX compile features - done
+[2.484s] CMake Error at CMakeLists.txt:5 (find_package):
+[2.484s]   By not providing "Findcatkin.cmake" in CMAKE_MODULE_PATH this project has
+[2.484s]   asked CMake to find a package configuration file provided by "catkin", but
+[2.484s]   CMake did not find one.
+[2.484s] 
+[2.484s]   Could not find a package configuration file provided by "catkin" with any
+[2.484s]   of the following names:
+[2.484s] 
+[2.484s]     catkinConfig.cmake
+[2.484s]     catkin-config.cmake
+[2.484s] 
+[2.484s]   Add the installation prefix of "catkin" to CMAKE_PREFIX_PATH or set
+[2.484s]   "catkin_DIR" to a directory containing one of the above files.  If "catkin"
+[2.484s]   provides a separate development package or SDK, be sure it has been
+[2.484s]   installed.
+[2.485s] 
+[2.485s] 
+[2.485s] -- Configuring incomplete, errors occurred!
+[2.485s] See also "/root/robot_demo/src/robot_demo/build/openslam_gmapping/CMakeFiles/CMakeOutput.log".

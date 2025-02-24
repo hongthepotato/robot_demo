@@ -1,0 +1,26 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from my_msg/msg/IrState.msg
+// generated code does not contain a copyright notice
+
+
+module my_msg {
+  module msg {
+    struct IrState {
+      int8 ir0;
+
+      int8 ir1;
+
+      int8 ir2;
+
+      int8 ir3;
+
+      int8 ir4;
+
+      int8 ir5;
+
+      int8 ir6;
+
+      int8 ir7;
+    };
+  };
+};

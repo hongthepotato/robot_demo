@@ -1,0 +1,53 @@
+[0.018s] Invoking command in '/root/robot_demo/src/robot_demo/build/rplidar_ros': /usr/bin/cmake /root/robot_demo/src/robot_demo/rplidar_ros -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/root/robot_demo/src/robot_demo/install/rplidar_ros
+[0.096s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.123s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.309s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.497s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.503s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[4.058s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[4.165s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[4.167s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[4.325s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[4.440s] -- Found std_srvs: 2.0.5 (/opt/ros/foxy/share/std_srvs/cmake)
+[4.462s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[4.528s] -- Configuring done
+[4.815s] -- Generating done
+[4.816s] CMake Warning:
+[4.816s]   Manually-specified variables were not used by the project:
+[4.816s] 
+[4.816s]     CATKIN_INSTALL_INTO_PREFIX_ROOT
+[4.816s] 
+[4.816s] 
+[4.981s] -- Build files have been written to: /root/robot_demo/src/robot_demo/build/rplidar_ros
+[4.993s] Invoked command in '/root/robot_demo/src/robot_demo/build/rplidar_ros' returned '0': /usr/bin/cmake /root/robot_demo/src/robot_demo/rplidar_ros -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/root/robot_demo/src/robot_demo/install/rplidar_ros
+[4.998s] Invoking command in '/root/robot_demo/src/robot_demo/build/rplidar_ros': /usr/bin/cmake --build /root/robot_demo/src/robot_demo/build/rplidar_ros -- -j16 -l16
+[5.039s] [35m[1mScanning dependencies of target rplidarNodeClient[0m
+[5.039s] [35m[1mScanning dependencies of target rplidarNode[0m
+[5.055s] [  7%] [32mBuilding CXX object CMakeFiles/rplidarNodeClient.dir/src/client.cpp.o[0m
+[5.075s] [ 21%] [32mBuilding CXX object CMakeFiles/rplidarNode.dir/src/node.cpp.o[0m
+[5.075s] [ 21%] [32mBuilding CXX object CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/net_serial.cpp.o[0m
+[5.075s] [ 28%] [32mBuilding CXX object CMakeFiles/rplidarNode.dir/sdk/src/hal/thread.cpp.o[0m
+[5.075s] [ 42%] [32mBuilding CXX object CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/timer.cpp.o[0m
+[5.075s] [ 42%] [32mBuilding CXX object CMakeFiles/rplidarNode.dir/sdk/src/rplidar_driver.cpp.o[0m
+[5.076s] [ 50%] [32mBuilding CXX object CMakeFiles/rplidarNode.dir/sdk/src/sl_lidar_driver.cpp.o[0m
+[5.077s] [ 64%] [32mBuilding CXX object CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/net_socket.cpp.o[0m
+[5.078s] [ 64%] [32mBuilding CXX object CMakeFiles/rplidarNode.dir/sdk/src/sl_udp_channel.cpp.o[0m
+[5.078s] [ 71%] [32mBuilding CXX object CMakeFiles/rplidarNode.dir/sdk/src/sl_serial_channel.cpp.o[0m
+[5.078s] [ 85%] [32mBuilding CXX object CMakeFiles/rplidarNode.dir/sdk/src/sl_tcp_channel.cpp.o[0m
+[5.078s] [ 85%] [32mBuilding CXX object CMakeFiles/rplidarNode.dir/sdk/src/sl_crc.cpp.o[0m
+[5.132s] [01m[K/root/robot_demo/src/robot_demo/rplidar_ros/src/client.cpp:38:10:[m[K [01;31m[Kfatal error: [m[Kros/ros.h: No such file or directory
+[5.132s]    38 | #include [01;31m[K"ros/ros.h"[m[K
+[5.132s]       |          [01;31m[K^~~~~~~~~~~[m[K
+[5.132s] [01m[K/root/robot_demo/src/robot_demo/rplidar_ros/src/node.cpp:35:10:[m[K [01;31m[Kfatal error: [m[Kros/ros.h: No such file or directory
+[5.132s]    35 | #include [01;31m[K"ros/ros.h"[m[K
+[5.132s]       |          [01;31m[K^~~~~~~~~~~[m[K
+[5.133s] compilation terminated.
+[5.133s] compilation terminated.
+[5.136s] make[2]: *** [CMakeFiles/rplidarNode.dir/build.make:63: CMakeFiles/rplidarNode.dir/src/node.cpp.o] Error 1
+[5.137s] make[2]: *** Waiting for unfinished jobs....
+[5.137s] make[2]: *** [CMakeFiles/rplidarNodeClient.dir/build.make:63: CMakeFiles/rplidarNodeClient.dir/src/client.cpp.o] Error 1
+[5.137s] make[1]: *** [CMakeFiles/Makefile2:80: CMakeFiles/rplidarNodeClient.dir/all] Error 2
+[5.137s] make[1]: *** Waiting for unfinished jobs....
+[5.853s] make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/rplidarNode.dir/all] Error 2
+[5.853s] make: *** [Makefile:141: all] Error 2
+[5.856s] Invoked command in '/root/robot_demo/src/robot_demo/build/rplidar_ros' returned '2': /usr/bin/cmake --build /root/robot_demo/src/robot_demo/build/rplidar_ros -- -j16 -l16

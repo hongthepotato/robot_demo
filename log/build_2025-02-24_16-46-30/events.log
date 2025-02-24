@@ -1,0 +1,381 @@
+[0.000000] (-) TimerEvent: {}
+[0.001396] (my_msg) JobQueued: {'identifier': 'my_msg', 'dependencies': OrderedDict()}
+[0.001483] (openslam_gmapping) JobQueued: {'identifier': 'openslam_gmapping', 'dependencies': OrderedDict()}
+[0.001503] (robot_model) JobQueued: {'identifier': 'robot_model', 'dependencies': OrderedDict()}
+[0.001517] (rplidar_ros) JobQueued: {'identifier': 'rplidar_ros', 'dependencies': OrderedDict()}
+[0.001530] (usb_cam) JobQueued: {'identifier': 'usb_cam', 'dependencies': OrderedDict()}
+[0.001543] (gmapping) JobQueued: {'identifier': 'gmapping', 'dependencies': OrderedDict([('openslam_gmapping', '/root/robot_demo/src/robot_demo/install/openslam_gmapping')])}
+[0.001559] (robot_base) JobQueued: {'identifier': 'robot_base', 'dependencies': OrderedDict([('my_msg', '/root/robot_demo/src/robot_demo/install/my_msg')])}
+[0.001572] (nav) JobQueued: {'identifier': 'nav', 'dependencies': OrderedDict([('openslam_gmapping', '/root/robot_demo/src/robot_demo/install/openslam_gmapping'), ('gmapping', '/root/robot_demo/src/robot_demo/install/gmapping')])}
+[0.001587] (slam_gmapping) JobQueued: {'identifier': 'slam_gmapping', 'dependencies': OrderedDict([('openslam_gmapping', '/root/robot_demo/src/robot_demo/install/openslam_gmapping'), ('gmapping', '/root/robot_demo/src/robot_demo/install/gmapping')])}
+[0.001602] (openslam_gmapping) JobStarted: {'identifier': 'openslam_gmapping'}
+[0.014152] (my_msg) JobStarted: {'identifier': 'my_msg'}
+[0.023275] (robot_model) JobStarted: {'identifier': 'robot_model'}
+[0.032304] (rplidar_ros) JobStarted: {'identifier': 'rplidar_ros'}
+[0.041427] (usb_cam) JobStarted: {'identifier': 'usb_cam'}
+[0.052062] (openslam_gmapping) JobProgress: {'identifier': 'openslam_gmapping', 'progress': 'cmake'}
+[0.053456] (openslam_gmapping) Command: {'cmd': ['/usr/bin/cmake', '/root/robot_demo/src/robot_demo/openslam_gmapping', '-DCATKIN_INSTALL_INTO_PREFIX_ROOT=0', '-DCMAKE_INSTALL_PREFIX=/root/robot_demo/src/robot_demo/install/openslam_gmapping'], 'cwd': '/root/robot_demo/src/robot_demo/build/openslam_gmapping', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'root'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/root/robot_demo/install/my_msg/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/root'), ('OLDPWD', '/root/robot_demo/src/robot_demo/rplidar_ros/launch'), ('ROS_PYTHON_VERSION', '3'), ('WSL_DISTRO_NAME', 'Ubuntu-20.04'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/root/robot_demo/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'root'), ('NAME', 'LAPTOP-F76KEGM7'), ('WSL_INTEROP', '/run/WSL/9423_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/WindowsApps/CanonicalGroupLimited.Ubuntu20.04LTS_2004.6.16.0_x64__79rhkp1fndgsc:/mnt/d/abaqus/2022/Commands:/mnt/d/abaqus/2022:/mnt/c/Program Files/Microsoft MPI/Bin/:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.4/bin:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.4/libnvvp:/mnt/c/Program Files/POV-Ray/v3.7/bin/pvengine64.exe:/mnt/d/Openssh/bin:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/minikube:/mnt/d/maven/apache-maven-3.9.6/bin:/mnt/c/Program Files/Git/cmd:/mnt/d/anaconda:/mnt/d/javafx-sdk-22.0.1/lib:/mnt/d/texlive/2020/bin/win32:/mnt/c/Program Files/NVIDIA Corporation/Nsight Compute 2024.1.1/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Windows/System32/DriverStore/FileRepository/nvamui.inf_amd64_bd2b3542cc027bef:/mnt/c/Windows/System32:/mnt/c/jdks/bin:/mnt/d/Atomsk:/mnt/d/Eclipse Adoptium/jdk-10.0.2/bin:/mnt/c/jdks/jre/bin:/mnt/c/mingw64/bin:/mnt/d/Microsoft VS Code/bin:/mnt/d/IntelliJ IDEA 2024.2.1 Ultimate/bin:/snap/bin'), ('XDG_RUNTIME_DIR', '/mnt/wslg/runtime-dir'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/root/robot_demo/install/robot_model:/root/robot_demo/install/robot_base:/root/robot_demo/install/my_msg:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/root/robot_demo/src/robot_demo/build/openslam_gmapping'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/root/robot_demo/install/my_msg/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/root/robot_demo/install/robot_model:/root/robot_demo/install/robot_base:/root/robot_demo/install/my_msg'), ('WSLENV', '')]), 'shell': False}
+[0.062741] (my_msg) JobProgress: {'identifier': 'my_msg', 'progress': 'cmake'}
+[0.066891] (my_msg) Command: {'cmd': ['/usr/bin/cmake', '/root/robot_demo/src/robot_demo/my_msg', '-DCMAKE_INSTALL_PREFIX=/root/robot_demo/src/robot_demo/install/my_msg'], 'cwd': '/root/robot_demo/src/robot_demo/build/my_msg', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'root'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/root/robot_demo/install/my_msg/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/root'), ('OLDPWD', '/root/robot_demo/src/robot_demo/rplidar_ros/launch'), ('ROS_PYTHON_VERSION', '3'), ('WSL_DISTRO_NAME', 'Ubuntu-20.04'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/root/robot_demo/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'root'), ('NAME', 'LAPTOP-F76KEGM7'), ('WSL_INTEROP', '/run/WSL/9423_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/WindowsApps/CanonicalGroupLimited.Ubuntu20.04LTS_2004.6.16.0_x64__79rhkp1fndgsc:/mnt/d/abaqus/2022/Commands:/mnt/d/abaqus/2022:/mnt/c/Program Files/Microsoft MPI/Bin/:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.4/bin:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.4/libnvvp:/mnt/c/Program Files/POV-Ray/v3.7/bin/pvengine64.exe:/mnt/d/Openssh/bin:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/minikube:/mnt/d/maven/apache-maven-3.9.6/bin:/mnt/c/Program Files/Git/cmd:/mnt/d/anaconda:/mnt/d/javafx-sdk-22.0.1/lib:/mnt/d/texlive/2020/bin/win32:/mnt/c/Program Files/NVIDIA Corporation/Nsight Compute 2024.1.1/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Windows/System32/DriverStore/FileRepository/nvamui.inf_amd64_bd2b3542cc027bef:/mnt/c/Windows/System32:/mnt/c/jdks/bin:/mnt/d/Atomsk:/mnt/d/Eclipse Adoptium/jdk-10.0.2/bin:/mnt/c/jdks/jre/bin:/mnt/c/mingw64/bin:/mnt/d/Microsoft VS Code/bin:/mnt/d/IntelliJ IDEA 2024.2.1 Ultimate/bin:/snap/bin'), ('XDG_RUNTIME_DIR', '/mnt/wslg/runtime-dir'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/root/robot_demo/install/robot_model:/root/robot_demo/install/robot_base:/root/robot_demo/install/my_msg:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/root/robot_demo/src/robot_demo/build/my_msg'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/root/robot_demo/install/my_msg/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/root/robot_demo/install/robot_model:/root/robot_demo/install/robot_base:/root/robot_demo/install/my_msg:/opt/ros/foxy'), ('WSLENV', '')]), 'shell': False}
+[0.071271] (robot_model) JobProgress: {'identifier': 'robot_model', 'progress': 'cmake'}
+[0.074398] (robot_model) Command: {'cmd': ['/usr/bin/cmake', '/root/robot_demo/src/robot_demo/robot_model', '-DCMAKE_INSTALL_PREFIX=/root/robot_demo/src/robot_demo/install/robot_model'], 'cwd': '/root/robot_demo/src/robot_demo/build/robot_model', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'root'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/root/robot_demo/install/my_msg/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/root'), ('OLDPWD', '/root/robot_demo/src/robot_demo/rplidar_ros/launch'), ('ROS_PYTHON_VERSION', '3'), ('WSL_DISTRO_NAME', 'Ubuntu-20.04'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/root/robot_demo/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'root'), ('NAME', 'LAPTOP-F76KEGM7'), ('WSL_INTEROP', '/run/WSL/9423_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/WindowsApps/CanonicalGroupLimited.Ubuntu20.04LTS_2004.6.16.0_x64__79rhkp1fndgsc:/mnt/d/abaqus/2022/Commands:/mnt/d/abaqus/2022:/mnt/c/Program Files/Microsoft MPI/Bin/:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.4/bin:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.4/libnvvp:/mnt/c/Program Files/POV-Ray/v3.7/bin/pvengine64.exe:/mnt/d/Openssh/bin:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/minikube:/mnt/d/maven/apache-maven-3.9.6/bin:/mnt/c/Program Files/Git/cmd:/mnt/d/anaconda:/mnt/d/javafx-sdk-22.0.1/lib:/mnt/d/texlive/2020/bin/win32:/mnt/c/Program Files/NVIDIA Corporation/Nsight Compute 2024.1.1/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Windows/System32/DriverStore/FileRepository/nvamui.inf_amd64_bd2b3542cc027bef:/mnt/c/Windows/System32:/mnt/c/jdks/bin:/mnt/d/Atomsk:/mnt/d/Eclipse Adoptium/jdk-10.0.2/bin:/mnt/c/jdks/jre/bin:/mnt/c/mingw64/bin:/mnt/d/Microsoft VS Code/bin:/mnt/d/IntelliJ IDEA 2024.2.1 Ultimate/bin:/snap/bin'), ('XDG_RUNTIME_DIR', '/mnt/wslg/runtime-dir'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/root/robot_demo/install/robot_model:/root/robot_demo/install/robot_base:/root/robot_demo/install/my_msg:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/root/robot_demo/src/robot_demo/build/robot_model'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/root/robot_demo/install/my_msg/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/root/robot_demo/install/robot_model:/root/robot_demo/install/robot_base:/root/robot_demo/install/my_msg:/opt/ros/foxy'), ('WSLENV', '')]), 'shell': False}
+[0.077845] (rplidar_ros) JobProgress: {'identifier': 'rplidar_ros', 'progress': 'cmake'}
+[0.081370] (rplidar_ros) Command: {'cmd': ['/usr/bin/cmake', '/root/robot_demo/src/robot_demo/rplidar_ros', '-DCMAKE_INSTALL_PREFIX=/root/robot_demo/src/robot_demo/install/rplidar_ros'], 'cwd': '/root/robot_demo/src/robot_demo/build/rplidar_ros', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'root'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/root/robot_demo/install/my_msg/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/root'), ('OLDPWD', '/root/robot_demo/src/robot_demo/rplidar_ros/launch'), ('ROS_PYTHON_VERSION', '3'), ('WSL_DISTRO_NAME', 'Ubuntu-20.04'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/root/robot_demo/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'root'), ('NAME', 'LAPTOP-F76KEGM7'), ('WSL_INTEROP', '/run/WSL/9423_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/WindowsApps/CanonicalGroupLimited.Ubuntu20.04LTS_2004.6.16.0_x64__79rhkp1fndgsc:/mnt/d/abaqus/2022/Commands:/mnt/d/abaqus/2022:/mnt/c/Program Files/Microsoft MPI/Bin/:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.4/bin:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.4/libnvvp:/mnt/c/Program Files/POV-Ray/v3.7/bin/pvengine64.exe:/mnt/d/Openssh/bin:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/minikube:/mnt/d/maven/apache-maven-3.9.6/bin:/mnt/c/Program Files/Git/cmd:/mnt/d/anaconda:/mnt/d/javafx-sdk-22.0.1/lib:/mnt/d/texlive/2020/bin/win32:/mnt/c/Program Files/NVIDIA Corporation/Nsight Compute 2024.1.1/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Windows/System32/DriverStore/FileRepository/nvamui.inf_amd64_bd2b3542cc027bef:/mnt/c/Windows/System32:/mnt/c/jdks/bin:/mnt/d/Atomsk:/mnt/d/Eclipse Adoptium/jdk-10.0.2/bin:/mnt/c/jdks/jre/bin:/mnt/c/mingw64/bin:/mnt/d/Microsoft VS Code/bin:/mnt/d/IntelliJ IDEA 2024.2.1 Ultimate/bin:/snap/bin'), ('XDG_RUNTIME_DIR', '/mnt/wslg/runtime-dir'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/root/robot_demo/install/robot_model:/root/robot_demo/install/robot_base:/root/robot_demo/install/my_msg:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/root/robot_demo/src/robot_demo/build/rplidar_ros'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/root/robot_demo/install/my_msg/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/root/robot_demo/install/robot_model:/root/robot_demo/install/robot_base:/root/robot_demo/install/my_msg'), ('WSLENV', '')]), 'shell': False}
+[0.091412] (usb_cam) JobProgress: {'identifier': 'usb_cam', 'progress': 'cmake'}
+[0.092763] (usb_cam) Command: {'cmd': ['/usr/bin/cmake', '/root/robot_demo/src/robot_demo/usb_cam', '-DCATKIN_INSTALL_INTO_PREFIX_ROOT=0', '-DCMAKE_INSTALL_PREFIX=/root/robot_demo/src/robot_demo/install/usb_cam'], 'cwd': '/root/robot_demo/src/robot_demo/build/usb_cam', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'root'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/root/robot_demo/install/my_msg/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/root'), ('OLDPWD', '/root/robot_demo/src/robot_demo/rplidar_ros/launch'), ('ROS_PYTHON_VERSION', '3'), ('WSL_DISTRO_NAME', 'Ubuntu-20.04'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/root/robot_demo/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'root'), ('NAME', 'LAPTOP-F76KEGM7'), ('WSL_INTEROP', '/run/WSL/9423_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/WindowsApps/CanonicalGroupLimited.Ubuntu20.04LTS_2004.6.16.0_x64__79rhkp1fndgsc:/mnt/d/abaqus/2022/Commands:/mnt/d/abaqus/2022:/mnt/c/Program Files/Microsoft MPI/Bin/:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.4/bin:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.4/libnvvp:/mnt/c/Program Files/POV-Ray/v3.7/bin/pvengine64.exe:/mnt/d/Openssh/bin:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/minikube:/mnt/d/maven/apache-maven-3.9.6/bin:/mnt/c/Program Files/Git/cmd:/mnt/d/anaconda:/mnt/d/javafx-sdk-22.0.1/lib:/mnt/d/texlive/2020/bin/win32:/mnt/c/Program Files/NVIDIA Corporation/Nsight Compute 2024.1.1/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Windows/System32/DriverStore/FileRepository/nvamui.inf_amd64_bd2b3542cc027bef:/mnt/c/Windows/System32:/mnt/c/jdks/bin:/mnt/d/Atomsk:/mnt/d/Eclipse Adoptium/jdk-10.0.2/bin:/mnt/c/jdks/jre/bin:/mnt/c/mingw64/bin:/mnt/d/Microsoft VS Code/bin:/mnt/d/IntelliJ IDEA 2024.2.1 Ultimate/bin:/snap/bin'), ('XDG_RUNTIME_DIR', '/mnt/wslg/runtime-dir'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/root/robot_demo/install/robot_model:/root/robot_demo/install/robot_base:/root/robot_demo/install/my_msg:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/root/robot_demo/src/robot_demo/build/usb_cam'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/root/robot_demo/install/my_msg/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/root/robot_demo/install/robot_model:/root/robot_demo/install/robot_base:/root/robot_demo/install/my_msg'), ('WSLENV', '')]), 'shell': False}
+[0.099266] (-) TimerEvent: {}
+[0.199769] (-) TimerEvent: {}
+[0.300157] (-) TimerEvent: {}
+[0.343839] (usb_cam) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.4.0\n'}
+[0.344858] (robot_model) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.4.0\n'}
+[0.345053] (rplidar_ros) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.4.0\n'}
+[0.347733] (openslam_gmapping) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.4.0\n'}
+[0.349697] (my_msg) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.4.0\n'}
+[0.400341] (-) TimerEvent: {}
+[0.500882] (-) TimerEvent: {}
+[0.601430] (-) TimerEvent: {}
+[0.616231] (usb_cam) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.4.0\n'}
+[0.618739] (robot_model) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.4.0\n'}
+[0.629349] (my_msg) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.4.0\n'}
+[0.629559] (rplidar_ros) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.4.0\n'}
+[0.629708] (openslam_gmapping) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.4.0\n'}
+[0.701605] (-) TimerEvent: {}
+[0.737503] (usb_cam) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[0.737790] (robot_model) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[0.739425] (rplidar_ros) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[0.741948] (my_msg) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[0.772139] (openslam_gmapping) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[0.801832] (-) TimerEvent: {}
+[0.887569] (rplidar_ros) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[0.890125] (rplidar_ros) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.894075] (robot_model) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[0.895099] (robot_model) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.898596] (my_msg) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[0.899864] (my_msg) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.902040] (-) TimerEvent: {}
+[0.917022] (usb_cam) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[0.918088] (usb_cam) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.970680] (openslam_gmapping) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[0.972046] (openslam_gmapping) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[1.002295] (-) TimerEvent: {}
+[1.058240] (robot_model) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[1.062300] (rplidar_ros) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[1.070482] (robot_model) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[1.071629] (robot_model) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[1.073795] (rplidar_ros) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[1.074320] (rplidar_ros) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[1.076954] (robot_model) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[1.078782] (my_msg) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[1.079353] (rplidar_ros) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[1.089679] (my_msg) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[1.090294] (my_msg) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[1.094065] (my_msg) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[1.102482] (-) TimerEvent: {}
+[1.108920] (usb_cam) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[1.121474] (usb_cam) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[1.121896] (usb_cam) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[1.124757] (usb_cam) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[1.185224] (openslam_gmapping) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[1.198929] (openslam_gmapping) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[1.199413] (openslam_gmapping) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[1.202675] (-) TimerEvent: {}
+[1.204746] (openslam_gmapping) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[1.260268] (robot_model) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[1.261690] (robot_model) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.264462] (rplidar_ros) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[1.265711] (rplidar_ros) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.276794] (my_msg) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[1.277967] (my_msg) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.302845] (-) TimerEvent: {}
+[1.337835] (usb_cam) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[1.339158] (usb_cam) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.391792] (openslam_gmapping) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[1.393173] (openslam_gmapping) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.403053] (-) TimerEvent: {}
+[1.429864] (rplidar_ros) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[1.430278] (robot_model) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[1.441650] (robot_model) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[1.442186] (rplidar_ros) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[1.442403] (robot_model) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[1.442578] (rplidar_ros) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[1.464475] (robot_model) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[1.464711] (rplidar_ros) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[1.465901] (my_msg) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[1.476464] (my_msg) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[1.476935] (my_msg) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[1.480772] (my_msg) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[1.503163] (-) TimerEvent: {}
+[1.509299] (robot_model) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[1.509727] (robot_model) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[1.509798] (rplidar_ros) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[1.509860] (rplidar_ros) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[1.514800] (my_msg) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[1.515295] (my_msg) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[1.543603] (usb_cam) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[1.555399] (usb_cam) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[1.555804] (usb_cam) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[1.556626] (usb_cam) StdoutLine: {'line': b'-- Searching required modules\n'}
+[1.565629] (usb_cam) StdoutLine: {'line': b'-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.1") \n'}
+[1.566347] (usb_cam) StdoutLine: {'line': b"-- Checking for module 'libavcodec'\n"}
+[1.585117] (openslam_gmapping) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[1.587052] (usb_cam) StdoutLine: {'line': b'--   Found libavcodec, version 58.54.100\n'}
+[1.599090] (openslam_gmapping) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[1.599704] (openslam_gmapping) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[1.603357] (-) TimerEvent: {}
+[1.703839] (-) TimerEvent: {}
+[1.736430] (robot_model) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)\n'}
+[1.737011] (my_msg) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)\n'}
+[1.738524] (rplidar_ros) StdoutLine: {'line': b'-- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)\n'}
+[1.746423] (my_msg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.759825] (my_msg) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[1.771281] (usb_cam) StdoutLine: {'line': b"-- Checking for module 'libavutil'\n"}
+[1.788998] (usb_cam) StdoutLine: {'line': b'--   Found libavutil, version 56.31.100\n'}
+[1.803971] (-) TimerEvent: {}
+[1.844311] (robot_model) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[1.849022] (robot_model) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[1.850733] (robot_model) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[1.852125] (robot_model) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the style conventions in PEP 257\n"}
+[1.854917] (robot_model) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[1.858870] (robot_model) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.862689] (robot_model) StdoutLine: {'line': b'-- Generating done\n'}
+[1.864740] (robot_model) StdoutLine: {'line': b'-- Build files have been written to: /root/robot_demo/src/robot_demo/build/robot_model\n'}
+[1.866550] (usb_cam) StdoutLine: {'line': b"-- Checking for module 'libswscale'\n"}
+[1.869397] (robot_model) CommandEnded: {'returncode': 0}
+[1.874734] (robot_model) JobProgress: {'identifier': 'robot_model', 'progress': 'build'}
+[1.874887] (robot_model) Command: {'cmd': ['/usr/bin/cmake', '--build', '/root/robot_demo/src/robot_demo/build/robot_model', '--', '-j16', '-l16'], 'cwd': '/root/robot_demo/src/robot_demo/build/robot_model', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'root'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/root/robot_demo/install/my_msg/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/root'), ('OLDPWD', '/root/robot_demo/src/robot_demo/rplidar_ros/launch'), ('ROS_PYTHON_VERSION', '3'), ('WSL_DISTRO_NAME', 'Ubuntu-20.04'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/root/robot_demo/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'root'), ('NAME', 'LAPTOP-F76KEGM7'), ('WSL_INTEROP', '/run/WSL/9423_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/WindowsApps/CanonicalGroupLimited.Ubuntu20.04LTS_2004.6.16.0_x64__79rhkp1fndgsc:/mnt/d/abaqus/2022/Commands:/mnt/d/abaqus/2022:/mnt/c/Program Files/Microsoft MPI/Bin/:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.4/bin:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.4/libnvvp:/mnt/c/Program Files/POV-Ray/v3.7/bin/pvengine64.exe:/mnt/d/Openssh/bin:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/minikube:/mnt/d/maven/apache-maven-3.9.6/bin:/mnt/c/Program Files/Git/cmd:/mnt/d/anaconda:/mnt/d/javafx-sdk-22.0.1/lib:/mnt/d/texlive/2020/bin/win32:/mnt/c/Program Files/NVIDIA Corporation/Nsight Compute 2024.1.1/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Windows/System32/DriverStore/FileRepository/nvamui.inf_amd64_bd2b3542cc027bef:/mnt/c/Windows/System32:/mnt/c/jdks/bin:/mnt/d/Atomsk:/mnt/d/Eclipse Adoptium/jdk-10.0.2/bin:/mnt/c/jdks/jre/bin:/mnt/c/mingw64/bin:/mnt/d/Microsoft VS Code/bin:/mnt/d/IntelliJ IDEA 2024.2.1 Ultimate/bin:/snap/bin'), ('XDG_RUNTIME_DIR', '/mnt/wslg/runtime-dir'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/root/robot_demo/install/robot_model:/root/robot_demo/install/robot_base:/root/robot_demo/install/my_msg:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/root/robot_demo/src/robot_demo/build/robot_model'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/root/robot_demo/install/my_msg/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/root/robot_demo/install/robot_model:/root/robot_demo/install/robot_base:/root/robot_demo/install/my_msg:/opt/ros/foxy'), ('WSLENV', '')]), 'shell': False}
+[1.886307] (usb_cam) StdoutLine: {'line': b'--   Found libswscale, version 5.5.100\n'}
+[1.904116] (-) TimerEvent: {}
+[1.917851] (robot_model) CommandEnded: {'returncode': 0}
+[1.918924] (robot_model) JobProgress: {'identifier': 'robot_model', 'progress': 'install'}
+[1.932659] (robot_model) Command: {'cmd': ['/usr/bin/cmake', '--install', '/root/robot_demo/src/robot_demo/build/robot_model'], 'cwd': '/root/robot_demo/src/robot_demo/build/robot_model', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'root'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/root/robot_demo/install/my_msg/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/root'), ('OLDPWD', '/root/robot_demo/src/robot_demo/rplidar_ros/launch'), ('ROS_PYTHON_VERSION', '3'), ('WSL_DISTRO_NAME', 'Ubuntu-20.04'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/root/robot_demo/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'root'), ('NAME', 'LAPTOP-F76KEGM7'), ('WSL_INTEROP', '/run/WSL/9423_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/WindowsApps/CanonicalGroupLimited.Ubuntu20.04LTS_2004.6.16.0_x64__79rhkp1fndgsc:/mnt/d/abaqus/2022/Commands:/mnt/d/abaqus/2022:/mnt/c/Program Files/Microsoft MPI/Bin/:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.4/bin:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.4/libnvvp:/mnt/c/Program Files/POV-Ray/v3.7/bin/pvengine64.exe:/mnt/d/Openssh/bin:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/minikube:/mnt/d/maven/apache-maven-3.9.6/bin:/mnt/c/Program Files/Git/cmd:/mnt/d/anaconda:/mnt/d/javafx-sdk-22.0.1/lib:/mnt/d/texlive/2020/bin/win32:/mnt/c/Program Files/NVIDIA Corporation/Nsight Compute 2024.1.1/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Windows/System32/DriverStore/FileRepository/nvamui.inf_amd64_bd2b3542cc027bef:/mnt/c/Windows/System32:/mnt/c/jdks/bin:/mnt/d/Atomsk:/mnt/d/Eclipse Adoptium/jdk-10.0.2/bin:/mnt/c/jdks/jre/bin:/mnt/c/mingw64/bin:/mnt/d/Microsoft VS Code/bin:/mnt/d/IntelliJ IDEA 2024.2.1 Ultimate/bin:/snap/bin'), ('XDG_RUNTIME_DIR', '/mnt/wslg/runtime-dir'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/root/robot_demo/install/robot_model:/root/robot_demo/install/robot_base:/root/robot_demo/install/my_msg:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/root/robot_demo/src/robot_demo/build/robot_model'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/root/robot_demo/install/my_msg/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/root/robot_demo/install/robot_model:/root/robot_demo/install/robot_base:/root/robot_demo/install/my_msg:/opt/ros/foxy'), ('WSLENV', '')]), 'shell': False}
+[1.934993] (rplidar_ros) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.941213] (robot_model) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[1.941476] (robot_model) StdoutLine: {'line': b'-- Installing: /root/robot_demo/src/robot_demo/install/robot_model/share/robot_model/config\n'}
+[1.941951] (robot_model) StdoutLine: {'line': b'-- Installing: /root/robot_demo/src/robot_demo/install/robot_model/share/robot_model/config/world\n'}
+[1.942203] (robot_model) StdoutLine: {'line': b'-- Installing: /root/robot_demo/src/robot_demo/install/robot_model/share/robot_model/config/world/model.config\n'}
+[1.942543] (rplidar_ros) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[1.942787] (robot_model) StdoutLine: {'line': b'-- Installing: /root/robot_demo/src/robot_demo/install/robot_model/share/robot_model/config/world/pillar.sdf\n'}
+[1.943342] (robot_model) StdoutLine: {'line': b'-- Installing: /root/robot_demo/src/robot_demo/install/robot_model/share/robot_model/config/world/model.sdf\n'}
+[1.944386] (robot_model) StdoutLine: {'line': b'-- Installing: /root/robot_demo/src/robot_demo/install/robot_model/share/robot_model/config/twist_mux.yaml\n'}
+[1.944683] (robot_model) StdoutLine: {'line': b'-- Installing: /root/robot_demo/src/robot_demo/install/robot_model/share/robot_model/config/mapper_params_online_async.yaml\n'}
+[1.945401] (robot_model) StdoutLine: {'line': b'-- Installing: /root/robot_demo/src/robot_demo/install/robot_model/share/robot_model/description\n'}
+[1.945673] (robot_model) StdoutLine: {'line': b'-- Installing: /root/robot_demo/src/robot_demo/install/robot_model/share/robot_model/description/inertial_macros.xacro\n'}
+[1.946198] (robot_model) StdoutLine: {'line': b'-- Installing: /root/robot_demo/src/robot_demo/install/robot_model/share/robot_model/description/lidar.xacro\n'}
+[1.946757] (robot_model) StdoutLine: {'line': b'-- Installing: /root/robot_demo/src/robot_demo/install/robot_model/share/robot_model/description/robot_core.xacro\n'}
+[1.947338] (robot_model) StdoutLine: {'line': b'-- Installing: /root/robot_demo/src/robot_demo/install/robot_model/share/robot_model/description/robot.urdf.xacro\n'}
+[1.947929] (robot_model) StdoutLine: {'line': b'-- Installing: /root/robot_demo/src/robot_demo/install/robot_model/share/robot_model/description/ros2_control.xacro\n'}
+[1.948583] (robot_model) StdoutLine: {'line': b'-- Installing: /root/robot_demo/src/robot_demo/install/robot_model/share/robot_model/description/gazebo_control.xacro\n'}
+[1.949287] (robot_model) StdoutLine: {'line': b'-- Installing: /root/robot_demo/src/robot_demo/install/robot_model/share/robot_model/worlds\n'}
+[1.949631] (robot_model) StdoutLine: {'line': b'-- Installing: /root/robot_demo/src/robot_demo/install/robot_model/share/robot_model/launch\n'}
+[1.949950] (robot_model) StdoutLine: {'line': b'-- Installing: /root/robot_demo/src/robot_demo/install/robot_model/share/robot_model/launch/rsp.launch.py\n'}
+[1.950767] (robot_model) StdoutLine: {'line': b'-- Installing: /root/robot_demo/src/robot_demo/install/robot_model/share/robot_model/launch/launch_sim.launch.py\n'}
+[1.951244] (robot_model) StdoutLine: {'line': b'-- Installing: /root/robot_demo/src/robot_demo/install/robot_model/share/robot_model/include\n'}
+[1.951565] (robot_model) StdoutLine: {'line': b'-- Installing: /root/robot_demo/src/robot_demo/install/robot_model/share/robot_model/param\n'}
+[1.952270] (robot_model) StdoutLine: {'line': b'-- Installing: /root/robot_demo/src/robot_demo/install/robot_model/share/ament_index/resource_index/package_run_dependencies/robot_model\n'}
+[1.952698] (robot_model) StdoutLine: {'line': b'-- Installing: /root/robot_demo/src/robot_demo/install/robot_model/share/ament_index/resource_index/parent_prefix_path/robot_model\n'}
+[1.953137] (robot_model) StdoutLine: {'line': b'-- Installing: /root/robot_demo/src/robot_demo/install/robot_model/share/robot_model/environment/ament_prefix_path.sh\n'}
+[1.953361] (robot_model) StdoutLine: {'line': b'-- Installing: /root/robot_demo/src/robot_demo/install/robot_model/share/robot_model/environment/ament_prefix_path.dsv\n'}
+[1.953693] (robot_model) StdoutLine: {'line': b'-- Installing: /root/robot_demo/src/robot_demo/install/robot_model/share/robot_model/environment/path.sh\n'}
+[1.954375] (robot_model) StdoutLine: {'line': b'-- Installing: /root/robot_demo/src/robot_demo/install/robot_model/share/robot_model/environment/path.dsv\n'}
+[1.954852] (robot_model) StdoutLine: {'line': b'-- Installing: /root/robot_demo/src/robot_demo/install/robot_model/share/robot_model/local_setup.bash\n'}
+[1.955152] (robot_model) StdoutLine: {'line': b'-- Installing: /root/robot_demo/src/robot_demo/install/robot_model/share/robot_model/local_setup.sh\n'}
+[1.955511] (robot_model) StdoutLine: {'line': b'-- Installing: /root/robot_demo/src/robot_demo/install/robot_model/share/robot_model/local_setup.zsh\n'}
+[1.955750] (robot_model) StdoutLine: {'line': b'-- Installing: /root/robot_demo/src/robot_demo/install/robot_model/share/robot_model/local_setup.dsv\n'}
+[1.956141] (robot_model) StdoutLine: {'line': b'-- Installing: /root/robot_demo/src/robot_demo/install/robot_model/share/robot_model/package.dsv\n'}
+[1.956231] (robot_model) StdoutLine: {'line': b'-- Installing: /root/robot_demo/src/robot_demo/install/robot_model/share/ament_index/resource_index/packages/robot_model\n'}
+[1.956285] (robot_model) StdoutLine: {'line': b'-- Installing: /root/robot_demo/src/robot_demo/install/robot_model/share/robot_model/cmake/robot_modelConfig.cmake\n'}
+[1.956337] (robot_model) StdoutLine: {'line': b'-- Installing: /root/robot_demo/src/robot_demo/install/robot_model/share/robot_model/cmake/robot_modelConfig-version.cmake\n'}
+[1.956388] (robot_model) StdoutLine: {'line': b'-- Installing: /root/robot_demo/src/robot_demo/install/robot_model/share/robot_model/package.xml\n'}
+[1.958494] (robot_model) CommandEnded: {'returncode': 0}
+[1.977478] (usb_cam) StdoutLine: {'line': b"-- Checking for module 'libv4l2'\n"}
+[1.981340] (usb_cam) StdoutLine: {'line': b"--   No package 'libv4l2' found\n"}
+[1.981921] (usb_cam) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[1.982158] (usb_cam) StdoutLine: {'line': b'See also "/root/robot_demo/src/robot_demo/build/usb_cam/CMakeFiles/CMakeOutput.log".\n'}
+[1.982347] (usb_cam) StderrLine: {'line': b'CMake Error at /usr/share/cmake-3.16/Modules/FindPkgConfig.cmake:463 (message):\n'}
+[1.982551] (usb_cam) StderrLine: {'line': b'  A required package was not found\n'}
+[1.982729] (usb_cam) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[1.983146] (usb_cam) StderrLine: {'line': b'  /usr/share/cmake-3.16/Modules/FindPkgConfig.cmake:643 (_pkg_check_modules_internal)\n'}
+[1.983310] (usb_cam) StderrLine: {'line': b'  CMakeLists.txt:10 (pkg_check_modules)\n'}
+[1.983473] (usb_cam) StderrLine: {'line': b'\n'}
+[1.983635] (usb_cam) StderrLine: {'line': b'\n'}
+[1.996478] (robot_model) JobEnded: {'identifier': 'robot_model', 'rc': 0}
+[1.999443] (usb_cam) CommandEnded: {'returncode': 1}
+[2.004639] (-) TimerEvent: {}
+[2.028758] (usb_cam) JobEnded: {'identifier': 'usb_cam', 'rc': 1}
+[2.104784] (-) TimerEvent: {}
+[2.205165] (-) TimerEvent: {}
+[2.305669] (-) TimerEvent: {}
+[2.406024] (-) TimerEvent: {}
+[2.485022] (openslam_gmapping) StderrLine: {'line': b'CMake Error at CMakeLists.txt:5 (find_package):\n'}
+[2.485216] (openslam_gmapping) StderrLine: {'line': b'  By not providing "Findcatkin.cmake" in CMAKE_MODULE_PATH this project has\n'}
+[2.485275] (openslam_gmapping) StderrLine: {'line': b'  asked CMake to find a package configuration file provided by "catkin", but\n'}
+[2.485440] (openslam_gmapping) StderrLine: {'line': b'  CMake did not find one.\n'}
+[2.485495] (openslam_gmapping) StderrLine: {'line': b'\n'}
+[2.485546] (openslam_gmapping) StderrLine: {'line': b'  Could not find a package configuration file provided by "catkin" with any\n'}
+[2.485596] (openslam_gmapping) StderrLine: {'line': b'  of the following names:\n'}
+[2.485645] (openslam_gmapping) StderrLine: {'line': b'\n'}
+[2.485695] (openslam_gmapping) StderrLine: {'line': b'    catkinConfig.cmake\n'}
+[2.485744] (openslam_gmapping) StderrLine: {'line': b'    catkin-config.cmake\n'}
+[2.485793] (openslam_gmapping) StderrLine: {'line': b'\n'}
+[2.485861] (openslam_gmapping) StderrLine: {'line': b'  Add the installation prefix of "catkin" to CMAKE_PREFIX_PATH or set\n'}
+[2.485936] (openslam_gmapping) StderrLine: {'line': b'  "catkin_DIR" to a directory containing one of the above files.  If "catkin"\n'}
+[2.485987] (openslam_gmapping) StderrLine: {'line': b'  provides a separate development package or SDK, be sure it has been\n'}
+[2.486036] (openslam_gmapping) StderrLine: {'line': b'  installed.\n'}
+[2.486085] (openslam_gmapping) StderrLine: {'line': b'\n'}
+[2.486133] (openslam_gmapping) StderrLine: {'line': b'\n'}
+[2.486182] (openslam_gmapping) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[2.486244] (openslam_gmapping) StdoutLine: {'line': b'See also "/root/robot_demo/src/robot_demo/build/openslam_gmapping/CMakeFiles/CMakeOutput.log".\n'}
+[2.488656] (openslam_gmapping) JobEnded: {'identifier': 'openslam_gmapping', 'rc': 'SIGINT'}
+[2.506167] (-) TimerEvent: {}
+[2.606590] (-) TimerEvent: {}
+[2.632089] (my_msg) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  \n'}
+[2.632334] (rplidar_ros) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  \n'}
+[2.706720] (-) TimerEvent: {}
+[2.807062] (-) TimerEvent: {}
+[2.907483] (-) TimerEvent: {}
+[3.007916] (-) TimerEvent: {}
+[3.108264] (-) TimerEvent: {}
+[3.184851] (my_msg) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/foxy/include  \n'}
+[3.185378] (rplidar_ros) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/foxy/include  \n'}
+[3.208486] (-) TimerEvent: {}
+[3.309116] (-) TimerEvent: {}
+[3.409469] (-) TimerEvent: {}
+[3.509863] (-) TimerEvent: {}
+[3.610190] (-) TimerEvent: {}
+[3.710533] (-) TimerEvent: {}
+[3.810868] (-) TimerEvent: {}
+[3.911234] (-) TimerEvent: {}
+[4.011667] (-) TimerEvent: {}
+[4.112242] (-) TimerEvent: {}
+[4.163850] (rplidar_ros) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[4.164247] (my_msg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[4.202781] (my_msg) StdoutLine: {'line': b'-- Found std_msgs: 2.0.5 (/opt/ros/foxy/share/std_msgs/cmake)\n'}
+[4.212446] (-) TimerEvent: {}
+[4.243407] (my_msg) StdoutLine: {'line': b'-- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)\n'}
+[4.287246] (rplidar_ros) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)\n'}
+[4.290129] (rplidar_ros) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[4.290711] (my_msg) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)\n'}
+[4.291424] (my_msg) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[4.292305] (my_msg) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[4.292734] (rplidar_ros) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[4.312603] (-) TimerEvent: {}
+[4.413052] (-) TimerEvent: {}
+[4.428890] (my_msg) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[4.429226] (my_msg) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[4.430575] (rplidar_ros) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[4.431030] (rplidar_ros) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[4.513187] (-) TimerEvent: {}
+[4.561783] (rplidar_ros) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed\n'}
+[4.562076] (rplidar_ros) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads\n'}
+[4.569423] (my_msg) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed\n'}
+[4.569824] (my_msg) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads\n'}
+[4.613399] (-) TimerEvent: {}
+[4.692604] (rplidar_ros) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads - not found\n'}
+[4.692986] (rplidar_ros) StdoutLine: {'line': b'-- Looking for pthread_create in pthread\n'}
+[4.695163] (my_msg) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads - not found\n'}
+[4.695402] (my_msg) StdoutLine: {'line': b'-- Looking for pthread_create in pthread\n'}
+[4.713515] (-) TimerEvent: {}
+[4.813913] (-) TimerEvent: {}
+[4.824865] (my_msg) StdoutLine: {'line': b'-- Looking for pthread_create in pthread - found\n'}
+[4.825769] (rplidar_ros) StdoutLine: {'line': b'-- Looking for pthread_create in pthread - found\n'}
+[4.825996] (my_msg) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[4.826750] (rplidar_ros) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[4.914068] (-) TimerEvent: {}
+[4.992942] (rplidar_ros) StdoutLine: {'line': b'-- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)\n'}
+[5.004713] (my_msg) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") \n'}
+[5.014241] (-) TimerEvent: {}
+[5.114639] (-) TimerEvent: {}
+[5.126727] (rplidar_ros) StdoutLine: {'line': b'-- Found std_srvs: 2.0.5 (/opt/ros/foxy/share/std_srvs/cmake)\n'}
+[5.148285] (rplidar_ros) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)\n'}
+[5.163224] (my_msg) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.9.2 (/opt/ros/foxy/share/ament_cmake_ros/cmake)\n'}
+[5.191519] (rplidar_ros) StderrLine: {'line': b"Error parsing '/root/robot_demo/src/robot_demo/rplidar_ros/package.xml':\n"}
+[5.214804] (-) TimerEvent: {}
+[5.315170] (-) TimerEvent: {}
+[5.415528] (-) TimerEvent: {}
+[5.419810] (rplidar_ros) StderrLine: {'line': b'Traceback (most recent call last):\n'}
+[5.419975] (rplidar_ros) StderrLine: {'line': b'  File "/opt/ros/foxy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 143, in <module>\n'}
+[5.420032] (rplidar_ros) StderrLine: {'line': b'    main()\n'}
+[5.420082] (rplidar_ros) StderrLine: {'line': b'  File "/opt/ros/foxy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 52, in main\n'}
+[5.420168] (rplidar_ros) StderrLine: {'line': b'    raise e\n'}
+[5.420224] (rplidar_ros) StderrLine: {'line': b'  File "/opt/ros/foxy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 48, in main\n'}
+[5.420273] (rplidar_ros) StderrLine: {'line': b'    package = parse_package_string(\n'}
+[5.420328] (rplidar_ros) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/catkin_pkg/package.py", line 786, in parse_package_string\n'}
+[5.420376] (rplidar_ros) StderrLine: {'line': b"    raise InvalidPackage('Error(s):%s' % (''.join(['\\n- %s' % e for e in errors])), filename)\n"}
+[5.420453] (rplidar_ros) StderrLine: {'line': b"catkin_pkg.package.InvalidPackage: Error(s) in package '/root/robot_demo/src/robot_demo/rplidar_ros/package.xml':\n"}
+[5.420507] (rplidar_ros) StderrLine: {'line': b'Error(s):\n'}
+[5.420557] (rplidar_ros) StderrLine: {'line': b'- The manifest of package "rplidar_ros" (with format version 3) must not contain the following tags: run_depend\n'}
+[5.420605] (rplidar_ros) StderrLine: {'line': b'- Please replace <run_depend> tags with <exec_depend> tags.\n'}
+[5.452512] (rplidar_ros) StderrLine: {'line': b'CMake Error at /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:94 (message):\n'}
+[5.452776] (rplidar_ros) StderrLine: {'line': b'  execute_process(/usr/bin/python3\n'}
+[5.452892] (rplidar_ros) StderrLine: {'line': b'  /opt/ros/foxy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py\n'}
+[5.453074] (rplidar_ros) StderrLine: {'line': b'  /root/robot_demo/src/robot_demo/rplidar_ros/package.xml\n'}
+[5.453193] (rplidar_ros) StderrLine: {'line': b'  /root/robot_demo/src/robot_demo/build/rplidar_ros/ament_cmake_core/package.cmake)\n'}
+[5.453302] (rplidar_ros) StderrLine: {'line': b'  returned error code 1\n'}
+[5.453409] (rplidar_ros) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[5.453531] (rplidar_ros) StderrLine: {'line': b'  /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)\n'}
+[5.453609] (rplidar_ros) StderrLine: {'line': b'  /opt/ros/foxy/share/ament_lint_auto/cmake/ament_lint_auto_find_test_dependencies.cmake:31 (ament_package_xml)\n'}
+[5.453662] (rplidar_ros) StderrLine: {'line': b'  CMakeLists.txt:73 (ament_lint_auto_find_test_dependencies)\n'}
+[5.453711] (rplidar_ros) StderrLine: {'line': b'\n'}
+[5.453759] (rplidar_ros) StderrLine: {'line': b'\n'}
+[5.454547] (rplidar_ros) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[5.454703] (rplidar_ros) StdoutLine: {'line': b'See also "/root/robot_demo/src/robot_demo/build/rplidar_ros/CMakeFiles/CMakeOutput.log".\n'}
+[5.454768] (rplidar_ros) StdoutLine: {'line': b'See also "/root/robot_demo/src/robot_demo/build/rplidar_ros/CMakeFiles/CMakeError.log".\n'}
+[5.464027] (rplidar_ros) JobEnded: {'identifier': 'rplidar_ros', 'rc': 'SIGINT'}
+[5.515666] (-) TimerEvent: {}
+[5.616153] (-) TimerEvent: {}
+[5.716799] (-) TimerEvent: {}
+[5.817189] (-) TimerEvent: {}
+[5.917696] (-) TimerEvent: {}
+[6.018100] (-) TimerEvent: {}
+[6.118472] (-) TimerEvent: {}
+[6.218829] (-) TimerEvent: {}
+[6.319255] (-) TimerEvent: {}
+[6.419693] (-) TimerEvent: {}
+[6.520090] (-) TimerEvent: {}
+[6.620579] (-) TimerEvent: {}
+[6.720954] (-) TimerEvent: {}
+[6.821471] (-) TimerEvent: {}
+[6.921922] (-) TimerEvent: {}
+[7.022263] (-) TimerEvent: {}
+[7.122728] (-) TimerEvent: {}
+[7.223242] (-) TimerEvent: {}
+[7.323622] (-) TimerEvent: {}
+[7.424108] (-) TimerEvent: {}
+[7.524438] (-) TimerEvent: {}
+[7.624843] (-) TimerEvent: {}
+[7.725325] (-) TimerEvent: {}
+[7.825801] (-) TimerEvent: {}
+[7.926245] (-) TimerEvent: {}
+[8.026602] (-) TimerEvent: {}
+[8.126969] (-) TimerEvent: {}
+[8.227300] (-) TimerEvent: {}
+[8.327646] (-) TimerEvent: {}
+[8.428023] (-) TimerEvent: {}
+[8.528597] (-) TimerEvent: {}
+[8.629042] (-) TimerEvent: {}
+[8.729424] (-) TimerEvent: {}
+[8.808702] (my_msg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[8.829578] (-) TimerEvent: {}
+[8.873348] (my_msg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[8.897511] (my_msg) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") \n'}
+[8.900947] (my_msg) StdoutLine: {'line': b'-- Found python_cmake_module: 0.8.1 (/opt/ros/foxy/share/python_cmake_module/cmake)\n'}
+[8.929760] (-) TimerEvent: {}
+[9.030229] (-) TimerEvent: {}
+[9.130656] (-) TimerEvent: {}
+[9.231163] (-) TimerEvent: {}
+[9.286038] (my_msg) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.8.so (found suitable version "3.8.10", minimum required is "3.5") \n'}
+[9.286398] (my_msg) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[9.286562] (my_msg) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8\n'}
+[9.286714] (my_msg) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.8.so\n'}
+[9.305617] (my_msg) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[9.331334] (-) TimerEvent: {}
+[9.415452] (my_msg) StdoutLine: {'line': b'-- Configuring done\n'}
+[9.431534] (-) TimerEvent: {}
+[9.484125] (my_msg) StdoutLine: {'line': b'-- Generating done\n'}
+[9.501818] (my_msg) StdoutLine: {'line': b'-- Build files have been written to: /root/robot_demo/src/robot_demo/build/my_msg\n'}
+[9.512916] (my_msg) JobEnded: {'identifier': 'my_msg', 'rc': 'SIGINT'}
+[9.524039] (gmapping) JobSkipped: {'identifier': 'gmapping'}
+[9.524499] (robot_base) JobSkipped: {'identifier': 'robot_base'}
+[9.524606] (nav) JobSkipped: {'identifier': 'nav'}
+[9.524664] (slam_gmapping) JobSkipped: {'identifier': 'slam_gmapping'}
+[9.524688] (-) EventReactorShutdown: {}

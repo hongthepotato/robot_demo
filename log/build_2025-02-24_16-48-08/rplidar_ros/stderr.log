@@ -1,0 +1,21 @@
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CATKIN_INSTALL_INTO_PREFIX_ROOT
+
+
+[01m[K/root/robot_demo/src/robot_demo/rplidar_ros/src/client.cpp:38:10:[m[K [01;31m[Kfatal error: [m[Kros/ros.h: No such file or directory
+   38 | #include [01;31m[K"ros/ros.h"[m[K
+      |          [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/root/robot_demo/src/robot_demo/rplidar_ros/src/node.cpp:35:10:[m[K [01;31m[Kfatal error: [m[Kros/ros.h: No such file or directory
+   35 | #include [01;31m[K"ros/ros.h"[m[K
+      |          [01;31m[K^~~~~~~~~~~[m[K
+compilation terminated.
+compilation terminated.
+make[2]: *** [CMakeFiles/rplidarNode.dir/build.make:63: CMakeFiles/rplidarNode.dir/src/node.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+make[2]: *** [CMakeFiles/rplidarNodeClient.dir/build.make:63: CMakeFiles/rplidarNodeClient.dir/src/client.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:80: CMakeFiles/rplidarNodeClient.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/rplidarNode.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

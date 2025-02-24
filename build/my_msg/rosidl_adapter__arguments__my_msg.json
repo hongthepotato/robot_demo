@@ -1,0 +1,8 @@
+{
+  "package_name": "my_msg",
+  "non_idl_tuples": [
+    "/root/robot_demo/src/robot_demo/my_msg:msg/DriverOdo.msg",
+    "/root/robot_demo/src/robot_demo/my_msg:msg/IrState.msg",
+    "/root/robot_demo/src/robot_demo/my_msg:msg/DriverControl.msg"
+  ]
+}

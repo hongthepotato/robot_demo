@@ -1,0 +1,35 @@
+[0.056s] Invoking command in '/root/robot_demo/src/robot_demo/build/usb_cam': /usr/bin/cmake /root/robot_demo/src/robot_demo/usb_cam -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/root/robot_demo/src/robot_demo/install/usb_cam
+[0.302s] -- The C compiler identification is GNU 9.4.0
+[0.574s] -- The CXX compiler identification is GNU 9.4.0
+[0.696s] -- Check for working C compiler: /usr/bin/cc
+[0.875s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.876s] -- Detecting C compiler ABI info
+[1.067s] -- Detecting C compiler ABI info - done
+[1.080s] -- Detecting C compile features
+[1.080s] -- Detecting C compile features - done
+[1.083s] -- Check for working CXX compiler: /usr/bin/c++
+[1.296s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[1.297s] -- Detecting CXX compiler ABI info
+[1.502s] -- Detecting CXX compiler ABI info - done
+[1.514s] -- Detecting CXX compile features
+[1.514s] -- Detecting CXX compile features - done
+[1.515s] -- Searching required modules
+[1.524s] -- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.1") 
+[1.525s] -- Checking for module 'libavcodec'
+[1.545s] --   Found libavcodec, version 58.54.100
+[1.729s] -- Checking for module 'libavutil'
+[1.747s] --   Found libavutil, version 56.31.100
+[1.825s] -- Checking for module 'libswscale'
+[1.845s] --   Found libswscale, version 5.5.100
+[1.936s] -- Checking for module 'libv4l2'
+[1.940s] --   No package 'libv4l2' found
+[1.940s] -- Configuring incomplete, errors occurred!
+[1.940s] See also "/root/robot_demo/src/robot_demo/build/usb_cam/CMakeFiles/CMakeOutput.log".
+[1.941s] CMake Error at /usr/share/cmake-3.16/Modules/FindPkgConfig.cmake:463 (message):
+[1.941s]   A required package was not found
+[1.941s] Call Stack (most recent call first):
+[1.941s]   /usr/share/cmake-3.16/Modules/FindPkgConfig.cmake:643 (_pkg_check_modules_internal)
+[1.941s]   CMakeLists.txt:10 (pkg_check_modules)
+[1.942s] 
+[1.942s] 
+[1.958s] Invoked command in '/root/robot_demo/src/robot_demo/build/usb_cam' returned '1': /usr/bin/cmake /root/robot_demo/src/robot_demo/usb_cam -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/root/robot_demo/src/robot_demo/install/usb_cam

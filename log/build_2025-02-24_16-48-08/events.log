@@ -1,0 +1,126 @@
+[0.000000] (-) TimerEvent: {}
+[0.000847] (-) JobUnselected: {'identifier': 'gmapping'}
+[0.000990] (-) JobUnselected: {'identifier': 'my_msg'}
+[0.001036] (-) JobUnselected: {'identifier': 'nav'}
+[0.001054] (-) JobUnselected: {'identifier': 'openslam_gmapping'}
+[0.001103] (-) JobUnselected: {'identifier': 'robot_base'}
+[0.001146] (-) JobUnselected: {'identifier': 'robot_model'}
+[0.001199] (-) JobUnselected: {'identifier': 'slam_gmapping'}
+[0.001252] (-) JobUnselected: {'identifier': 'usb_cam'}
+[0.001273] (rplidar_ros) JobQueued: {'identifier': 'rplidar_ros', 'dependencies': OrderedDict()}
+[0.001290] (rplidar_ros) JobStarted: {'identifier': 'rplidar_ros'}
+[0.017058] (rplidar_ros) JobProgress: {'identifier': 'rplidar_ros', 'progress': 'cmake'}
+[0.018130] (rplidar_ros) Command: {'cmd': ['/usr/bin/cmake', '/root/robot_demo/src/robot_demo/rplidar_ros', '-DCATKIN_INSTALL_INTO_PREFIX_ROOT=0', '-DCMAKE_INSTALL_PREFIX=/root/robot_demo/src/robot_demo/install/rplidar_ros'], 'cwd': '/root/robot_demo/src/robot_demo/build/rplidar_ros', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'root'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/root/robot_demo/install/my_msg/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/root'), ('OLDPWD', '/root/robot_demo/src/robot_demo/rplidar_ros/launch'), ('ROS_PYTHON_VERSION', '3'), ('WSL_DISTRO_NAME', 'Ubuntu-20.04'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/root/robot_demo/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'root'), ('NAME', 'LAPTOP-F76KEGM7'), ('WSL_INTEROP', '/run/WSL/9423_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/WindowsApps/CanonicalGroupLimited.Ubuntu20.04LTS_2004.6.16.0_x64__79rhkp1fndgsc:/mnt/d/abaqus/2022/Commands:/mnt/d/abaqus/2022:/mnt/c/Program Files/Microsoft MPI/Bin/:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.4/bin:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.4/libnvvp:/mnt/c/Program Files/POV-Ray/v3.7/bin/pvengine64.exe:/mnt/d/Openssh/bin:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/minikube:/mnt/d/maven/apache-maven-3.9.6/bin:/mnt/c/Program Files/Git/cmd:/mnt/d/anaconda:/mnt/d/javafx-sdk-22.0.1/lib:/mnt/d/texlive/2020/bin/win32:/mnt/c/Program Files/NVIDIA Corporation/Nsight Compute 2024.1.1/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Windows/System32/DriverStore/FileRepository/nvamui.inf_amd64_bd2b3542cc027bef:/mnt/c/Windows/System32:/mnt/c/jdks/bin:/mnt/d/Atomsk:/mnt/d/Eclipse Adoptium/jdk-10.0.2/bin:/mnt/c/jdks/jre/bin:/mnt/c/mingw64/bin:/mnt/d/Microsoft VS Code/bin:/mnt/d/IntelliJ IDEA 2024.2.1 Ultimate/bin:/snap/bin'), ('XDG_RUNTIME_DIR', '/mnt/wslg/runtime-dir'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/root/robot_demo/install/robot_model:/root/robot_demo/install/robot_base:/root/robot_demo/install/my_msg:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/root/robot_demo/src/robot_demo/build/rplidar_ros'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/root/robot_demo/install/my_msg/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/root/robot_demo/install/robot_model:/root/robot_demo/install/robot_base:/root/robot_demo/install/my_msg'), ('WSLENV', '')]), 'shell': False}
+[0.096987] (rplidar_ros) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[0.099475] (-) TimerEvent: {}
+[0.123921] (rplidar_ros) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.199657] (-) TimerEvent: {}
+[0.300184] (-) TimerEvent: {}
+[0.309902] (rplidar_ros) StdoutLine: {'line': b'-- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)\n'}
+[0.400361] (-) TimerEvent: {}
+[0.498449] (rplidar_ros) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.500453] (-) TimerEvent: {}
+[0.503614] (rplidar_ros) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[0.600595] (-) TimerEvent: {}
+[0.700948] (-) TimerEvent: {}
+[0.801307] (-) TimerEvent: {}
+[0.901706] (-) TimerEvent: {}
+[1.002228] (-) TimerEvent: {}
+[1.102591] (-) TimerEvent: {}
+[1.202962] (-) TimerEvent: {}
+[1.303322] (-) TimerEvent: {}
+[1.403703] (-) TimerEvent: {}
+[1.504077] (-) TimerEvent: {}
+[1.604458] (-) TimerEvent: {}
+[1.704851] (-) TimerEvent: {}
+[1.805223] (-) TimerEvent: {}
+[1.905650] (-) TimerEvent: {}
+[2.006178] (-) TimerEvent: {}
+[2.106712] (-) TimerEvent: {}
+[2.207293] (-) TimerEvent: {}
+[2.307894] (-) TimerEvent: {}
+[2.408341] (-) TimerEvent: {}
+[2.508700] (-) TimerEvent: {}
+[2.609107] (-) TimerEvent: {}
+[2.709637] (-) TimerEvent: {}
+[2.810130] (-) TimerEvent: {}
+[2.910573] (-) TimerEvent: {}
+[3.011107] (-) TimerEvent: {}
+[3.111507] (-) TimerEvent: {}
+[3.211897] (-) TimerEvent: {}
+[3.312266] (-) TimerEvent: {}
+[3.412663] (-) TimerEvent: {}
+[3.513313] (-) TimerEvent: {}
+[3.613837] (-) TimerEvent: {}
+[3.714364] (-) TimerEvent: {}
+[3.814939] (-) TimerEvent: {}
+[3.915319] (-) TimerEvent: {}
+[4.015676] (-) TimerEvent: {}
+[4.058783] (rplidar_ros) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[4.115812] (-) TimerEvent: {}
+[4.165915] (rplidar_ros) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)\n'}
+[4.168522] (rplidar_ros) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[4.215996] (-) TimerEvent: {}
+[4.316570] (-) TimerEvent: {}
+[4.326300] (rplidar_ros) StdoutLine: {'line': b'-- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)\n'}
+[4.416821] (-) TimerEvent: {}
+[4.441303] (rplidar_ros) StdoutLine: {'line': b'-- Found std_srvs: 2.0.5 (/opt/ros/foxy/share/std_srvs/cmake)\n'}
+[4.462839] (rplidar_ros) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)\n'}
+[4.517011] (-) TimerEvent: {}
+[4.529259] (rplidar_ros) StdoutLine: {'line': b'-- Configuring done\n'}
+[4.617211] (-) TimerEvent: {}
+[4.717766] (-) TimerEvent: {}
+[4.815735] (rplidar_ros) StdoutLine: {'line': b'-- Generating done\n'}
+[4.816735] (rplidar_ros) StderrLine: {'line': b'CMake Warning:\n'}
+[4.816932] (rplidar_ros) StderrLine: {'line': b'  Manually-specified variables were not used by the project:\n'}
+[4.816992] (rplidar_ros) StderrLine: {'line': b'\n'}
+[4.817043] (rplidar_ros) StderrLine: {'line': b'    CATKIN_INSTALL_INTO_PREFIX_ROOT\n'}
+[4.817093] (rplidar_ros) StderrLine: {'line': b'\n'}
+[4.817143] (rplidar_ros) StderrLine: {'line': b'\n'}
+[4.817922] (-) TimerEvent: {}
+[4.918299] (-) TimerEvent: {}
+[4.981617] (rplidar_ros) StdoutLine: {'line': b'-- Build files have been written to: /root/robot_demo/src/robot_demo/build/rplidar_ros\n'}
+[4.994107] (rplidar_ros) CommandEnded: {'returncode': 0}
+[4.995000] (rplidar_ros) JobProgress: {'identifier': 'rplidar_ros', 'progress': 'build'}
+[4.997257] (rplidar_ros) Command: {'cmd': ['/usr/bin/cmake', '--build', '/root/robot_demo/src/robot_demo/build/rplidar_ros', '--', '-j16', '-l16'], 'cwd': '/root/robot_demo/src/robot_demo/build/rplidar_ros', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'root'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/root/robot_demo/install/my_msg/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/root'), ('OLDPWD', '/root/robot_demo/src/robot_demo/rplidar_ros/launch'), ('ROS_PYTHON_VERSION', '3'), ('WSL_DISTRO_NAME', 'Ubuntu-20.04'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/root/robot_demo/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'root'), ('NAME', 'LAPTOP-F76KEGM7'), ('WSL_INTEROP', '/run/WSL/9423_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/WindowsApps/CanonicalGroupLimited.Ubuntu20.04LTS_2004.6.16.0_x64__79rhkp1fndgsc:/mnt/d/abaqus/2022/Commands:/mnt/d/abaqus/2022:/mnt/c/Program Files/Microsoft MPI/Bin/:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.4/bin:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.4/libnvvp:/mnt/c/Program Files/POV-Ray/v3.7/bin/pvengine64.exe:/mnt/d/Openssh/bin:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/minikube:/mnt/d/maven/apache-maven-3.9.6/bin:/mnt/c/Program Files/Git/cmd:/mnt/d/anaconda:/mnt/d/javafx-sdk-22.0.1/lib:/mnt/d/texlive/2020/bin/win32:/mnt/c/Program Files/NVIDIA Corporation/Nsight Compute 2024.1.1/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Windows/System32/DriverStore/FileRepository/nvamui.inf_amd64_bd2b3542cc027bef:/mnt/c/Windows/System32:/mnt/c/jdks/bin:/mnt/d/Atomsk:/mnt/d/Eclipse Adoptium/jdk-10.0.2/bin:/mnt/c/jdks/jre/bin:/mnt/c/mingw64/bin:/mnt/d/Microsoft VS Code/bin:/mnt/d/IntelliJ IDEA 2024.2.1 Ultimate/bin:/snap/bin'), ('XDG_RUNTIME_DIR', '/mnt/wslg/runtime-dir'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/root/robot_demo/install/robot_model:/root/robot_demo/install/robot_base:/root/robot_demo/install/my_msg:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/root/robot_demo/src/robot_demo/build/rplidar_ros'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/root/robot_demo/install/my_msg/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/root/robot_demo/install/robot_model:/root/robot_demo/install/robot_base:/root/robot_demo/install/my_msg'), ('WSLENV', '')]), 'shell': False}
+[5.018766] (-) TimerEvent: {}
+[5.039678] (rplidar_ros) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target rplidarNodeClient\x1b[0m\n'}
+[5.040182] (rplidar_ros) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target rplidarNode\x1b[0m\n'}
+[5.055763] (rplidar_ros) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding CXX object CMakeFiles/rplidarNodeClient.dir/src/client.cpp.o\x1b[0m\n'}
+[5.075821] (rplidar_ros) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding CXX object CMakeFiles/rplidarNode.dir/src/node.cpp.o\x1b[0m\n'}
+[5.076306] (rplidar_ros) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding CXX object CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/net_serial.cpp.o\x1b[0m\n'}
+[5.076457] (rplidar_ros) StdoutLine: {'line': b'[ 28%] \x1b[32mBuilding CXX object CMakeFiles/rplidarNode.dir/sdk/src/hal/thread.cpp.o\x1b[0m\n'}
+[5.076645] (rplidar_ros) StdoutLine: {'line': b'[ 42%] \x1b[32mBuilding CXX object CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/timer.cpp.o\x1b[0m\n'}
+[5.076732] (rplidar_ros) StdoutLine: {'line': b'[ 42%] \x1b[32mBuilding CXX object CMakeFiles/rplidarNode.dir/sdk/src/rplidar_driver.cpp.o\x1b[0m\n'}
+[5.076802] (rplidar_ros) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/rplidarNode.dir/sdk/src/sl_lidar_driver.cpp.o\x1b[0m\n'}
+[5.077970] (rplidar_ros) StdoutLine: {'line': b'[ 64%] \x1b[32mBuilding CXX object CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/net_socket.cpp.o\x1b[0m\n'}
+[5.078344] (rplidar_ros) StdoutLine: {'line': b'[ 64%] \x1b[32mBuilding CXX object CMakeFiles/rplidarNode.dir/sdk/src/sl_udp_channel.cpp.o\x1b[0m\n'}
+[5.078978] (rplidar_ros) StdoutLine: {'line': b'[ 71%] \x1b[32mBuilding CXX object CMakeFiles/rplidarNode.dir/sdk/src/sl_serial_channel.cpp.o\x1b[0m\n'}
+[5.079211] (rplidar_ros) StdoutLine: {'line': b'[ 85%] \x1b[32mBuilding CXX object CMakeFiles/rplidarNode.dir/sdk/src/sl_tcp_channel.cpp.o\x1b[0m\n'}
+[5.079350] (rplidar_ros) StdoutLine: {'line': b'[ 85%] \x1b[32mBuilding CXX object CMakeFiles/rplidarNode.dir/sdk/src/sl_crc.cpp.o\x1b[0m\n'}
+[5.118870] (-) TimerEvent: {}
+[5.133282] (rplidar_ros) StderrLine: {'line': b'\x1b[01m\x1b[K/root/robot_demo/src/robot_demo/rplidar_ros/src/client.cpp:38:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[Kros/ros.h: No such file or directory\n'}
+[5.133519] (rplidar_ros) StderrLine: {'line': b'   38 | #include \x1b[01;31m\x1b[K"ros/ros.h"\x1b[m\x1b[K\n'}
+[5.133583] (rplidar_ros) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.133636] (rplidar_ros) StderrLine: {'line': b'\x1b[01m\x1b[K/root/robot_demo/src/robot_demo/rplidar_ros/src/node.cpp:35:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[Kros/ros.h: No such file or directory\n'}
+[5.133690] (rplidar_ros) StderrLine: {'line': b'   35 | #include \x1b[01;31m\x1b[K"ros/ros.h"\x1b[m\x1b[K\n'}
+[5.133752] (rplidar_ros) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.133818] (rplidar_ros) StderrLine: {'line': b'compilation terminated.\n'}
+[5.133890] (rplidar_ros) StderrLine: {'line': b'compilation terminated.\n'}
+[5.137325] (rplidar_ros) StderrLine: {'line': b'make[2]: *** [CMakeFiles/rplidarNode.dir/build.make:63: CMakeFiles/rplidarNode.dir/src/node.cpp.o] Error 1\n'}
+[5.137813] (rplidar_ros) StderrLine: {'line': b'make[2]: *** Waiting for unfinished jobs....\n'}
+[5.138185] (rplidar_ros) StderrLine: {'line': b'make[2]: *** [CMakeFiles/rplidarNodeClient.dir/build.make:63: CMakeFiles/rplidarNodeClient.dir/src/client.cpp.o] Error 1\n'}
+[5.138321] (rplidar_ros) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:80: CMakeFiles/rplidarNodeClient.dir/all] Error 2\n'}
+[5.138380] (rplidar_ros) StderrLine: {'line': b'make[1]: *** Waiting for unfinished jobs....\n'}
+[5.219023] (-) TimerEvent: {}
+[5.319462] (-) TimerEvent: {}
+[5.420081] (-) TimerEvent: {}
+[5.520680] (-) TimerEvent: {}
+[5.621173] (-) TimerEvent: {}
+[5.721563] (-) TimerEvent: {}
+[5.822183] (-) TimerEvent: {}
+[5.853947] (rplidar_ros) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/rplidarNode.dir/all] Error 2\n'}
+[5.854263] (rplidar_ros) StderrLine: {'line': b'make: *** [Makefile:141: all] Error 2\n'}
+[5.857062] (rplidar_ros) CommandEnded: {'returncode': 2}
+[5.887947] (rplidar_ros) JobEnded: {'identifier': 'rplidar_ros', 'rc': 2}
+[5.898784] (-) EventReactorShutdown: {}

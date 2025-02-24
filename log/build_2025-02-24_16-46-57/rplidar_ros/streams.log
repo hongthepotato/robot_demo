@@ -1,0 +1,42 @@
+[0.017s] Invoking command in '/root/robot_demo/src/robot_demo/build/rplidar_ros': /usr/bin/cmake /root/robot_demo/src/robot_demo/rplidar_ros -DCMAKE_INSTALL_PREFIX=/root/robot_demo/src/robot_demo/install/rplidar_ros
+[0.032s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.052s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.205s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.356s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.359s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[3.892s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[3.977s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[3.978s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[4.106s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[4.207s] -- Found std_srvs: 2.0.5 (/opt/ros/foxy/share/std_srvs/cmake)
+[4.219s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[4.261s] Error parsing '/root/robot_demo/src/robot_demo/rplidar_ros/package.xml':
+[4.355s] Traceback (most recent call last):
+[4.355s]   File "/opt/ros/foxy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 143, in <module>
+[4.356s]     main()
+[4.356s]   File "/opt/ros/foxy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 52, in main
+[4.356s]     raise e
+[4.356s]   File "/opt/ros/foxy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 48, in main
+[4.356s]     package = parse_package_string(
+[4.356s]   File "/usr/lib/python3/dist-packages/catkin_pkg/package.py", line 786, in parse_package_string
+[4.356s]     raise InvalidPackage('Error(s):%s' % (''.join(['\n- %s' % e for e in errors])), filename)
+[4.356s] catkin_pkg.package.InvalidPackage: Error(s) in package '/root/robot_demo/src/robot_demo/rplidar_ros/package.xml':
+[4.356s] Error(s):
+[4.356s] - The manifest of package "rplidar_ros" (with format version 3) must not contain the following tags: run_depend
+[4.356s] - Please replace <run_depend> tags with <exec_depend> tags.
+[4.381s] CMake Error at /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:94 (message):
+[4.382s]   execute_process(/usr/bin/python3
+[4.382s]   /opt/ros/foxy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py
+[4.382s]   /root/robot_demo/src/robot_demo/rplidar_ros/package.xml
+[4.382s]   /root/robot_demo/src/robot_demo/build/rplidar_ros/ament_cmake_core/package.cmake)
+[4.382s]   returned error code 1
+[4.382s] Call Stack (most recent call first):
+[4.382s]   /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)
+[4.382s]   /opt/ros/foxy/share/ament_lint_auto/cmake/ament_lint_auto_find_test_dependencies.cmake:31 (ament_package_xml)
+[4.382s]   CMakeLists.txt:73 (ament_lint_auto_find_test_dependencies)
+[4.383s] 
+[4.383s] 
+[4.383s] -- Configuring incomplete, errors occurred!
+[4.383s] See also "/root/robot_demo/src/robot_demo/build/rplidar_ros/CMakeFiles/CMakeOutput.log".
+[4.383s] See also "/root/robot_demo/src/robot_demo/build/rplidar_ros/CMakeFiles/CMakeError.log".
+[4.392s] Invoked command in '/root/robot_demo/src/robot_demo/build/rplidar_ros' returned '1': /usr/bin/cmake /root/robot_demo/src/robot_demo/rplidar_ros -DCMAKE_INSTALL_PREFIX=/root/robot_demo/src/robot_demo/install/rplidar_ros
