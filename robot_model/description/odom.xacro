@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" >
+    <!-- Odom LINK -->
+    <joint name="odom_to_base_footprint" type="fixed">
+        <parent link="odom"/>
+        <child link="base_footprint"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>  <!-- No offset between odom and base_footprint -->
+    </joint>
+
+    <link name="odom">
+        <!-- Odometry link typically doesn't have physical properties but is required for EKF -->
+    </link>
+
+    <gazebo>
+        <plugin name="gazebo_ros_odometry" filename="libgazebo_ros_odometry.so">
+            <robotNamespace>/</robotNamespace>
+            <topicName>/odom</topicName>
+            <!-- Additional configuration for the odometry plugin -->
+        </plugin>
+    </gazebo>
+</robot>

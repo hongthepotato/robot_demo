@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" >
+    <!--IMU LINK -->
+    <joint name="imu_link_to_base_footprint" type="fixed">
+        <parent link="base_footprint"/>
+        <child link="imu_link"/>
+        <origin xyz="0.075 -0.05 0.1" rpy="${pi} 0 0"/>  <!-- Offset for IMU relative to base_footprint -->
+    </joint>
+
+    <link name="imu_link">
+        <!-- IMU link typically doesn't have physical properties, it's just for TF -->
+    </link>
+
+    <gazebo>
+        <plugin name="gazebo_ros_imu" filename="libgazebo_ros_imu.so">
+            <robotNamespace>/</robotNamespace>
+            <topicName>/imu</topicName>
+            <bodyName>base_link</bodyName>
+            <!-- Additional IMU plugin configuration -->
+            <!-- <imuTopicName>/imu</imuTopicName> -->
+            <updateRate>50</updateRate>
+        </plugin>
+    </gazebo>
+</robot>
