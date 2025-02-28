@@ -1,10 +1,39 @@
 <launch>
-<include file="$(find robot_base)/launch/start_tf.launch" />
 
-<node pkg="rosserial_python" type="serial_node.py" name="rosserial_stm32" args="_port:=/dev/stm32 _baud:=1000000" output="screen"/>
-<node pkg="robot_base" type="robot_odom_time" name="robot_odom_time" output="screen"/>
-<!-- <node pkg="robot_base" type="robot_odom" name="robot_odom" output="screen"/> -->
-<node pkg="robot_base" type="robot_cmd" name="robot_cmd" output="screen"/>
-<node pkg="robot_base" type="robot_imu" name="robot_imu" output="screen"/>
-<include file="$(find robot_base)/launch/ekf_imu_odom.launch"/>
+    <!-- Argument to check whether we are running in simulation of on real robot -->
+    <arg name="use_stm32" default="false"/>
+    <!-- Include the start_tf launch file -->
+    <include file="$(find robot_base)/launch/start_tf.launch" />
+
+    <!-- Conditionally launch the STM-32related node for real robot-->
+    <group if="$(arg use_stm32)">
+        <node pkg="rosserial_python" type="serial_node.py" name="rosserial_stm32" args="_port:=/dev/stm32 _baud:=1000000" output="screen"/>
+        <node pkg="robot_base" type="robot_odom_time" name="robot_odom_time" output="screen"/>
+        <!-- <node pkg="robot_base" type="robot_odom" name="robot_odom" output="screen"/> -->
+        <node pkg="robot_base" type="robot_cmd" name="robot_cmd" output="screen"/>
+        <node pkg="robot_base" type="robot_imu" name="robot_imu" output="screen"/>
+    </group>
+
+    <!-- Otherwise, launch Gazebo-related nodes for simulation -->
+    <group unless="$(arg use_stm32)">
+        <!-- Include Gazebo simulation -->
+        <!-- <include file="$(find gazebo_ros)/launch/empty_world.launch"/> -->
+
+        <!-- Gazebo Robot State publisher to broadcast robot's state from gazebo-->
+        <!-- <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" -->
+              <!-- output="screen" args="robot_description:=/robot/description"/> -->
+
+        <!-- Gazebo IMU plugin -->
+        <!-- <node pkg="gazebo_ros" type="spawn_model" name="spawn_model" args="-file $(find robot -file $(find robot_base)/urdf/robot.urdf.xacro -param robot_description -robot_namespace $(arg robot_namespace) -urdf -z 1" />" -->
+
+        <!-- If using Gazebo, automatically provide odometry and cmd -->
+        <!-- The gazebo_ros_control plugin should be used to provide cmd_vel and odometry from Gazebo-->
+        <!-- <node pkg="gazebo_ros_control" type="gazebo_ros_control_node" name="gazebo_ros_control" output="screen"/> -->
+        <include file="$(find robot_model)/launch/launch_sim.launch">
+            <arg name="use_sim_time" value="true"/>
+        </include>
+    </group>
+
+    <!-- Include the EKF launch file (for both real and simulation)-->
+    <include file="$(find robot_base)/launch/ekf_imu_odom.launch"/>
 </launch>

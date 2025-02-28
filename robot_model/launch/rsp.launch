@@ -1,0 +1,11 @@
+<launch>
+    <arg name="use_sim_time" default="false" doc="Use sim time if true"/>
+
+    <!-- Specify the robot description URDF-->
+    <param name="robot_description" command="xacro '$(find robot_model)/description/robot.urdf.xacro'"/>
+
+    <!-- Start the robot_state_published node -->
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" output="screen">
+        <param name="use_sim_time" value="$(arg use_sim_time)"/>
+    </node>
+</launch>

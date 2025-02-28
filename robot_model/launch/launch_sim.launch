@@ -1,0 +1,16 @@
+<launch>
+    <!-- Include the robot_state_publisher launch file from our package, with sim time enabled-->
+    <arg name="use_sim_time" default="true"/>
+    <include file="$(find robot_model)/launch/rsp.launch">
+        <arg name="use_sim_time" value="$(arg use_sim_time)"/>
+    </include>
+
+    <!-- Include the Gazebo launch file provided by the gazebo_ros package -->
+    <include file="$(find gazebo_ros)/launch/empty_world.launch"/>
+
+    <!-- Run the static transform publisher to broadcast the odom -> base_footprint transform -->
+    <node name="odom_to_base_footprint" pkg="tf2_ros" type="static_transform_publisher" args="0 0 0 0 0 0 /odom /base_footprint"/>
+
+    <!-- Run the spawner node from the gazebo_ros package to spawn the robot-->
+<node name="spawn_entity" pkg="gazebo_ros" type="spawn_model" output="screen" args="-urdf -param robot_description -model robot_model -reference_frame world"/>
+</launch>
