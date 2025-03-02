@@ -70,9 +70,9 @@
         </xacro:inertial_box>
     </link>
 
-    <gazobo reference="chassis">
+    <gazebo reference="chassis">
         <material>Gazebo/White</material>
-    </gazobo>
+    </gazebo>
 
     <!-- LEFT WHEEL LINK-->
 

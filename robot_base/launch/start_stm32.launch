@@ -3,7 +3,7 @@
     <!-- Argument to check whether we are running in simulation of on real robot -->
     <arg name="use_stm32" default="false"/>
     <!-- Include the start_tf launch file -->
-    <include file="$(find robot_base)/launch/start_tf.launch" />
+    <!-- <include file="$(find robot_base)/launch/start_tf.launch" /> -->
 
     <!-- Conditionally launch the STM-32related node for real robot-->
     <group if="$(arg use_stm32)">
