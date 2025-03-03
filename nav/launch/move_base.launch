@@ -5,6 +5,7 @@
         <rosparam file="$(find nav)/param/local_costmap_params.yaml" command="load" />
         <rosparam file="$(find nav)/param/global_costmap_params.yaml" command="load" />
         <rosparam file="$(find nav)/param/base_local_planner_params.yaml" command="load" />
+        <param name="base_local_planner/meter_scoring" value="true"/>
     </node>
 
 </launch>

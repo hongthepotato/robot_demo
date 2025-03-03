@@ -1,0 +1,5 @@
+<launch>
+  <!-- 启动一个节点，用于确保MarkerArray中的四元数正确初始化 -->
+  <node pkg="tf" type="static_transform_publisher" name="frontier_orientation_initializer" 
+        args="0 0 0 0 0 0 1 map frontier 100" />
+</launch> 

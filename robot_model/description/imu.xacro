@@ -15,10 +15,11 @@
         <plugin name="gazebo_ros_imu" filename="libgazebo_ros_imu.so">
             <robotNamespace>/</robotNamespace>
             <topicName>/imu</topicName>
-            <bodyName>base_link</bodyName>
+            <bodyName>imu_link</bodyName>
+            <frameName>imu_link</frameName>
             <!-- Additional IMU plugin configuration -->
             <!-- <imuTopicName>/imu</imuTopicName> -->
-            <updateRate>50</updateRate>
+            <updateRate>30</updateRate>
         </plugin>
     </gazebo>
 </robot>

@@ -21,11 +21,11 @@
             
             <!-- Output -->
             <odometryFrame>odom</odometryFrame>
-            <robotBaseFrame>base_link</robotBaseFrame>
+            <robotBaseFrame>base_footprint</robotBaseFrame>
 
             <publishOdom>true</publishOdom>
-            <publishOdomTF>true</publishOdomTF>
-            <publishWheelTF>true</publishWheelTF>
+            <publishOdomTF>false</publishOdomTF>
+            <publishWheelTF>false</publishWheelTF>
 
         </plugin>
     </gazebo>
