@@ -7,7 +7,7 @@
 
     <!-- 使用自定义的世界文件 -->
     <include file="$(find gazebo_ros)/launch/empty_world.launch">
-        <arg name="world_name" value="$(find robot_model)/config/simple/simple.world"/>
+        <arg name="world_name" value="$(find robot_model)/config/easy/easy.world"/>
         <arg name="paused" value="false"/>
         <arg name="use_sim_time" value="$(arg use_sim_time)"/>
         <arg name="gui" value="true"/>
