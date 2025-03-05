@@ -4,15 +4,15 @@ TrajectoryPlannerROS:
   max_vel_x: 0.4 # X 方向最大速度
   min_vel_x: 0.05 # X 方向最小速速
 
-  max_vel_theta:  0.3 # 
-  min_vel_theta: -0.3
-  min_in_place_vel_theta: 0.1
+  max_vel_theta:  1.5 # 
+  min_vel_theta: -1.5
+  min_in_place_vel_theta: 0.8
 
   acc_lim_x: 0.25 # X 加速限制
   acc_lim_y: 0.25 # Y 加速限制
   acc_lim_theta: 0.25 # 角速度加速限制
 
-  max_trans_vel: 0.6 #最大传递速度（注意！）这个一定要是所有的值最大的，我这里最大的是2.5
+  max_trans_vel: 2.5 #最大传递速度（注意！）这个一定要是所有的值最大的，我这里最大的是2.5
   min_trans_vel: 0.1 #建议大于零
   max_rot_vel: 0.2 #最大转速
   min_rot_vel: -0.2 #最小转速 可以小于0，表示顺逆时针

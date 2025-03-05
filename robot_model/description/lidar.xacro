@@ -41,19 +41,28 @@
             <ray>
                 <scan>
                     <horizontal>
-                        <samples>360</samples>
+                        <samples>1440</samples>
                         <min_angle>-3.14</min_angle>
                         <max_angle>3.14</max_angle>
                     </horizontal>
                 </scan>
                 <range>
-                    <min>0.3</min>
+                    <min>0.1</min>
                     <max>12</max>
                 </range>
+                <noise>
+                    <type>gaussian</type>
+                    <mean>0.0</mean>
+                    <stddev>0.01</stddev>
+                </noise>
             </ray>
             <plugin name="laser_controller" filename="libgazebo_ros_laser.so">
                 <topicName>scan</topicName>
                 <frameName>laser_frame</frameName>
+                <gaussianNoise>0.01</gaussianNoise>
+                <alwaysOn>true</alwaysOn>
+                <updateRate>10</updateRate>
+                <visualize>true</visualize>
             </plugin>
         </sensor>
     </gazebo>

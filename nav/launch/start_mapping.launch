@@ -24,21 +24,7 @@
 
     <!-- 3. 启动自主探索节点 -->
     <!-- <include file="$(find nav)/launch/explore.launch" /> -->
-    
-    <!-- 3. 整合自主探索节点和四元数初始化节点 -->
-    <node pkg="explore_lite" type="explore" respawn="false" name="explore" output="screen">
-      <param name="robot_base_frame" value="base_footprint"/>
-      <param name="costmap_topic" value="map"/>
-      <!-- <param name="costmap_updates_topic" value="map_updates"/> -->
-      <param name="visualize" value="true"/>
-      <param name="planner_frequency" value="0.5"/>
-      <param name="progress_timeout" value="20.0"/>
-      <param name="potential_scale" value="3.0"/>
-      <param name="orientation_scale" value="0.5"/>
-      <param name="gain_scale" value="1.0"/>
-      <param name="transform_tolerance" value="0.3"/>
-      <param name="min_frontier_size" value="0.5"/>
-    </node>
+    <include file="$(find nav)/launch/explore_costmap.launch" />
     
     <!-- 3.1 添加MarkerArray四元数初始化节点 -->
     <node pkg="tf" type="static_transform_publisher" name="frontier_orientation_initializer" 

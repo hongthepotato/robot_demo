@@ -6,6 +6,25 @@
         <rosparam file="$(find nav)/param/global_costmap_params.yaml" command="load" />
         <rosparam file="$(find nav)/param/base_local_planner_params.yaml" command="load" />
         <param name="base_local_planner/meter_scoring" value="true"/>
+        
+        <!-- 增加变换容忍度 -->
+        <param name="global_costmap/transform_tolerance" value="1.0"/>
+        <param name="local_costmap/transform_tolerance" value="1.0"/>
+        
+        <!-- 添加恢复行为参数 -->
+        <!-- <param name="recovery_behavior_enabled" value="true"/>
+        <param name="clearing_rotation_allowed" value="true"/>
+        <param name="planner_patience" value="10.0"/>
+        <param name="controller_patience" value="20.0"/>
+        <param name="oscillation_timeout" value="10.0"/>
+        <param name="oscillation_distance" value="0.2"/>
+        <param name="conservative_reset_dist" value="0.5"/>
+        <param name="recovery_behaviors" value="[{name: conservative_reset, type: clear_costmap_recovery/ClearCostmapRecovery}, {name: rotate_recovery, type: rotate_recovery/RotateRecovery}, {name: aggressive_reset, type: clear_costmap_recovery/ClearCostmapRecovery}]"/> -->
+        
+        <!-- 确保发布完整的代价地图 -->
+        <!-- <param name="global_costmap/always_send_full_costmap" value="true"/>
+        <param name="global_costmap/publish_frequency" value="2.0"/> -->
+        
     </node>
 
 </launch>
