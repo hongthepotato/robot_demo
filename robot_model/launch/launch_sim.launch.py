@@ -34,8 +34,6 @@ def generate_launch_description():
                                '-entity', 'robot_model'],
                     output='screen')
 
-
-
     # Launch them all!
     return LaunchDescription([
         rsp,

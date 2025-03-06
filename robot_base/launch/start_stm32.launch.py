@@ -27,7 +27,7 @@ def generate_launch_description():
         PythonLaunchDescriptionSource(os.path.join(robot_base_share, 'launch', 'start_tf.launch.py'))
     )
     
-    # Conditionally include the rosserial node based on sim_mode
+    # Conditionally include the rosserial node based on sim_mode - only for real robot
     rosserial_node = Node(
         package='rosserial_python',
         executable='serial_node',  # Adjust if the executable name is different in ROS 2.
@@ -37,33 +37,46 @@ def generate_launch_description():
         condition=UnlessCondition(sim_mode)
     )
     
-    # Launch the robot_odom_time node from the robot_base package.
+    # Launch the robot_odom_time node from the robot_base package - only for real robot
     robot_odom_time_node = Node(
         package='robot_base',
         executable='robot_odom_time',
         name='robot_odom_time',
-        output='screen'
+        output='screen',
+        condition=UnlessCondition(sim_mode)
     )
     
-    # Launch the robot_cmd node from the robot_base package.
+    # Launch the robot_cmd node from the robot_base package - only for real robot
     robot_cmd_node = Node(
         package='robot_base',
         executable='robot_cmd',
         name='robot_cmd',
-        output='screen'
+        output='screen',
+        condition=UnlessCondition(sim_mode)
     )
     
-    # Launch the robot_imu node from the robot_base package.
+    # Launch the robot_imu node from the robot_base package - only for real robot
     robot_imu_node = Node(
         package='robot_base',
         executable='robot_imu',
         name='robot_imu',
-        output='screen'
+        output='screen',
+        condition=UnlessCondition(sim_mode)
     )
     
-    # Include the ekf_imu_odom launch file (assumed to be migrated as ekf_imu_odom.launch.py).
+    # Include the ekf_imu_odom launch file - works for both simulation and real robot
     ekf_imu_odom_launch = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource(os.path.join(robot_base_share, 'launch', 'ekf_imu_odom.launch.py'))
+        PythonLaunchDescriptionSource(os.path.join(robot_base_share, 'launch', 'ekf_imu_odom.launch.py')),
+        # Pass use_sim_time parameter based on sim_mode
+        launch_arguments={'use_sim_time': sim_mode}.items()
+    )
+    
+    # Include the simulation launch file when in simulation mode
+    simulation_launch = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(os.path.join(
+            get_package_share_directory('robot_model'), 'launch', 'launch_sim.launch.py'
+        )),
+        condition=IfCondition(sim_mode)
     )
     
     # Create and return the complete LaunchDescription.
@@ -75,4 +88,5 @@ def generate_launch_description():
         robot_cmd_node,
         robot_imu_node,
         ekf_imu_odom_launch,
+        simulation_launch
     ])
