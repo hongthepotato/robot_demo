@@ -3,6 +3,12 @@
 
     <gazebo>
         <plugin name="diff_drive" filename="libgazebo_ros_diff_drive.so">
+            <!-- ROS2 相关配置 -->
+            <ros>
+                <namespace>/</namespace>
+                <remapping>cmd_vel:=cmd_vel</remapping>
+                <remapping>odom:=odom</remapping>
+            </ros>
 
             <!-- Wheel Information -->
             <left_joint>left_wheel_joint</left_joint>
@@ -18,12 +24,13 @@
             
             <!-- Output -->
             <odometry_frame>odom</odometry_frame>
-            <robot_base_frame>base_link</robot_base_frame>
+            <robot_base_frame>base_footprint</robot_base_frame>
 
             <publish_odom>true</publish_odom>
             <publish_odom_tf>true</publish_odom_tf>
-            <publish_wheel_tf>true</publish_wheel_tf>
+            <publish_wheel_tf>false</publish_wheel_tf>
 
+            <update_rate>50</update_rate>
         </plugin>
     </gazebo>
 
