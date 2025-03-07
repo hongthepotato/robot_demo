@@ -1,18 +1,33 @@
-#include "ros/ros.h"
-#include "std_msgs/Int8.h"
+#include "rclcpp/rclcpp.hpp"
+#include "std_msgs/msg/int8.hpp"
 
-int main(int argc, char  *argv[])
+class RobotRodCmdNode : public rclcpp::Node
 {
-    /* code */
-    setlocale(LC_ALL,"");
-    ros::init(argc,argv,"robot_rod_cmd");
-    ros::NodeHandle nh;
-    ros::Publisher pub;
-    pub = nh.advertise<std_msgs::Int8>("rod_cmd", 1);	
-    std_msgs::Int8 cmd;
-    cmd .data=0;
-    pub.publish(cmd);
-    ros::spinOnce();
+public:
+  RobotRodCmdNode() : Node("robot_rod_cmd")
+  {
+    // 创建发布者
+    publisher_ = this->create_publisher<std_msgs::msg::Int8>("rod_cmd", 1);
+    
+    // 发布命令
+    auto cmd = std_msgs::msg::Int8();
+    cmd.data = 0;
+    publisher_->publish(cmd);
+    
+    // 由于只需要发布一次，我们可以在构造函数中完成后关闭节点
+    RCLCPP_INFO(this->get_logger(), "命令已发送，节点将关闭");
+  }
 
-    return 0;
+private:
+  rclcpp::Publisher<std_msgs::msg::Int8>::SharedPtr publisher_;
+};
+
+int main(int argc, char* argv[])
+{
+  setlocale(LC_ALL, "");
+  rclcpp::init(argc, argv);
+  auto node = std::make_shared<RobotRodCmdNode>();
+  rclcpp::spin_some(node);  // 只处理当前可用的回调
+  rclcpp::shutdown();
+  return 0;
 }
