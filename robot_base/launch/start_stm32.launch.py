@@ -23,9 +23,9 @@ def generate_launch_description():
     sim_mode = LaunchConfiguration('sim_mode')
     
     # Include the start_tf launch file (assumed to be migrated to ROS 2 as a Python launch file).
-    start_tf_launch = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource(os.path.join(robot_base_share, 'launch', 'start_tf.launch.py'))
-    )
+    # start_tf_launch = IncludeLaunchDescription(
+    #     PythonLaunchDescriptionSource(os.path.join(robot_base_share, 'launch', 'start_tf.launch.py'))
+    # )
     
     # Conditionally include the rosserial node based on sim_mode - only for real robot
     rosserial_node = Node(
@@ -76,13 +76,14 @@ def generate_launch_description():
         PythonLaunchDescriptionSource(os.path.join(
             get_package_share_directory('robot_model'), 'launch', 'launch_sim.launch.py'
         )),
+        launch_arguments={'use_sim_time': sim_mode}.items(),
         condition=IfCondition(sim_mode)
     )
     
     # Create and return the complete LaunchDescription.
     return LaunchDescription([
         sim_mode_arg,
-        start_tf_launch,
+        # start_tf_launch,
         rosserial_node,
         robot_odom_time_node,
         robot_cmd_node,

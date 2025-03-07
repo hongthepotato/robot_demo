@@ -1,14 +1,27 @@
 import os
 from launch import LaunchDescription
 from launch_ros.actions import Node
+from launch.substitutions import LaunchConfiguration
+from launch.actions import DeclareLaunchArgument
 
 def generate_launch_description():
+    # 声明use_sim_time参数
+    use_sim_time = LaunchConfiguration('use_sim_time', default='false')
+    
+    # 声明launch参数
+    declare_use_sim_time = DeclareLaunchArgument(
+        'use_sim_time',
+        default_value='false',
+        description='Use simulation (Gazebo) clock if true'
+    )
+    
     # Node to publish static transform from base_footprint to laser
     rplidar_node = Node(
         package='tf2_ros',
         executable='static_transform_publisher',
         name='rplidar2basefootprint',
         output='screen',
+        parameters=[{'use_sim_time': use_sim_time}],
         arguments=[
             '0.1086', '0', '0.28',    # Translation: x, y, z
             '3.1415926535', '0', '0',  # Rotation: roll, pitch, yaw (in radians)
@@ -22,6 +35,7 @@ def generate_launch_description():
         executable='static_transform_publisher',
         name='imu_link2basefootprint',
         output='screen',
+        parameters=[{'use_sim_time': use_sim_time}],
         arguments=[
             '0.075', '-0.05', '0.1',   # Translation: x, y, z
             '3.1415926535', '0', '0',   # Rotation: roll, pitch, yaw (in radians)
@@ -35,6 +49,7 @@ def generate_launch_description():
         executable='static_transform_publisher',
         name='wheel_link2basefootprint',
         output='screen',
+        parameters=[{'use_sim_time': use_sim_time}],
         arguments=[
             '0', '0', '0.01',   # Translation: x, y, z
             '0', '0', '0',      # Rotation: roll, pitch, yaw (in radians)
@@ -43,6 +58,7 @@ def generate_launch_description():
     )
 
     return LaunchDescription([
+        declare_use_sim_time,
         rplidar_node,
         imu_node,
         wheel_node,
