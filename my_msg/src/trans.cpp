@@ -1,36 +1,45 @@
-#include "ros/ros.h"
-#include "my_msg/driver_odo.h"
-#include "std_msgs/String.h"
+#include "rclcpp/rclcpp.hpp"
+#include "my_msg/msg/driver_odo.hpp"
+#include "std_msgs/msg/string.hpp"
 #include <sstream>
 
-ros::Publisher pub;
-
-void callback(const my_msg::driver_odo::ConstPtr& odo)
+class TransNode : public rclcpp::Node
 {
-    ROS_INFO("odo数据为l:%d,r:%d",odo->odol , odo->odor);
+public:
+  TransNode() : Node("rostalker")
+  {
+    // 创建发布者
+    publisher_ = this->create_publisher<std_msgs::msg::String>("stm32odo", 10);
+    
+    // 创建订阅者
+    subscription_ = this->create_subscription<my_msg::msg::DriverOdo>(
+      "stm32_odo", 10,
+      std::bind(&TransNode::callback, this, std::placeholders::_1));
+  }
 
-    std_msgs::String pubstr;
+private:
+  void callback(const my_msg::msg::DriverOdo::SharedPtr odo)
+  {
+    RCLCPP_INFO(this->get_logger(), "odo数据为l:%d,r:%d", odo->odol, odo->odor);
 
+    auto message = std_msgs::msg::String();
     std::stringstream ss;
     ss << "odo数据为l:" << odo->odol << ",r:" << odo->odor;
-    pubstr.data = ss.str();
+    message.data = ss.str();
 
-    pub.publish(pubstr);
+    publisher_->publish(message);
+  }
 
-}
+  rclcpp::Publisher<std_msgs::msg::String>::SharedPtr publisher_;
+  rclcpp::Subscription<my_msg::msg::DriverOdo>::SharedPtr subscription_;
+};
 
-int main(int argc, char  *argv[])
+int main(int argc, char *argv[])
 {
-    /* code */
-    setlocale(LC_ALL,"");
-    ros::init(argc,argv,"rostalker");
-    ros::NodeHandle nh;
-
-    pub = nh.advertise<std_msgs::String>("stm32odo",10);
-
-    ros::Subscriber sub =nh.subscribe<my_msg::driver_odo>("stm32_odo",10,callback);
-
-    ros::spin();
-
-    return 0;
+  setlocale(LC_ALL, "");
+  rclcpp::init(argc, argv);
+  auto node = std::make_shared<TransNode>();
+  rclcpp::spin(node);
+  rclcpp::shutdown();
+  return 0;
 }
