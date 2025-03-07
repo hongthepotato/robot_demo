@@ -56,13 +56,14 @@
                     <stddev>0.01</stddev>
                 </noise>
             </ray>
-            <plugin name="laser_controller" filename="libgazebo_ros_laser.so">
-                <topicName>scan</topicName>
-                <frameName>laser_frame</frameName>
-                <gaussianNoise>0.01</gaussianNoise>
-                <alwaysOn>true</alwaysOn>
-                <updateRate>10</updateRate>
-                <visualize>true</visualize>
+            <plugin name="laser_controller" filename="libgazebo_ros_ray_sensor.so">
+                <ros>
+                    <namespace>/</namespace>
+                    <remapping>~/out:=scan</remapping>
+                </ros>
+                <output_type>sensor_msgs/LaserScan</output_type>
+                <frame_name>laser_frame</frame_name>
+                <radiation_type>infrared</radiation_type>
             </plugin>
         </sensor>
     </gazebo>
