@@ -32,6 +32,7 @@ if(BUILD_TESTING)
   ament_lint_auto_find_test_dependencies()
 endif()
 
+# 安装目录
 install(
   DIRECTORY config description launch
   DESTINATION share/${PROJECT_NAME}
