@@ -34,7 +34,7 @@ def generate_launch_description():
                 {'use_sim_time': use_sim_time}  # 添加use_sim_time参数
             ],
             remappings=[
-                ('odometry/filtered', 'odom')
+                ('odometry/filtered', 'odom')  # EKF节点的输出重映射到/odom
             ]
         )
     ]) 
