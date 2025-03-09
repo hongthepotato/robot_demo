@@ -91,7 +91,8 @@ def generate_launch_description():
             ])
         ]),
         launch_arguments={
-            'use_sim_time': use_simulation  # 使用use_simulation作为use_sim_time
+            'use_sim_time': use_simulation,  # 使用use_simulation作为use_sim_time
+            'use_simulation': use_simulation  # 传递use_simulation参数
         }.items()
     )
     
