@@ -8,7 +8,7 @@
                 <!-- 命名空间和节点名称 -->
                 <namespace>/</namespace>
                 <remapping>cmd_vel:=cmd_vel</remapping>
-                <remapping>odom:=odom</remapping>
+                <remapping>odom:=/diff_drive/odom</remapping>
             </ros>
 
             <!-- Wheel Information -->
