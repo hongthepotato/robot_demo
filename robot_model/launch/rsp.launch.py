@@ -31,7 +31,7 @@ def generate_launch_description():
         name='joint_state_publisher',
         parameters=[{
             'use_sim_time': use_sim_time,
-            'rate': 50
+            'rate': 50.0
         }]
     )
 

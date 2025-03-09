@@ -9,18 +9,17 @@ from ament_index_python.packages import get_package_share_directory
 import os
 
 def generate_launch_description():
-    # 声明参数
-    use_sim_time_arg = DeclareLaunchArgument(
-        'use_sim_time',
+    # 声明参数 - 只使用一个参数控制仿真和时间
+    use_simulation = LaunchConfiguration('use_simulation')
+    use_simulation_arg = DeclareLaunchArgument(
+        'use_simulation',
         default_value='true',
-        description='Use simulation time if true'
+        description='Use simulation if true, real robot if false (also controls use_sim_time)'
     )
-    
-    use_sim_time = LaunchConfiguration('use_sim_time')
     
     # 仿真组
     sim_group = GroupAction(
-        condition=IfCondition(use_sim_time),
+        condition=IfCondition(use_simulation),
         actions=[
             IncludeLaunchDescription(
                 PythonLaunchDescriptionSource([
@@ -31,7 +30,7 @@ def generate_launch_description():
                     ])
                 ]),
                 launch_arguments={
-                    'use_sim_time': use_sim_time
+                    'use_sim_time': use_simulation  # 使用use_simulation作为use_sim_time
                 }.items()
             )
         ]
@@ -39,8 +38,21 @@ def generate_launch_description():
     
     # 真实机器人组
     real_robot_group = GroupAction(
-        condition=UnlessCondition(use_sim_time),
+        condition=UnlessCondition(use_simulation),
         actions=[
+            # 包含robot_state_publisher启动文件，确保TF树完整
+            IncludeLaunchDescription(
+                PythonLaunchDescriptionSource([
+                    PathJoinSubstitution([
+                        FindPackageShare('robot_model'),
+                        'launch',
+                        'rsp.launch.py'
+                    ])
+                ]),
+                launch_arguments={
+                    'use_sim_time': use_simulation  # 使用use_simulation作为use_sim_time
+                }.items()
+            ),
             Node(
                 package='micro_ros_agent',
                 executable='micro_ros_agent',
@@ -77,11 +89,14 @@ def generate_launch_description():
                 'launch',
                 'ekf_imu_odom.launch.py'
             ])
-        ])
+        ]),
+        launch_arguments={
+            'use_sim_time': use_simulation  # 使用use_simulation作为use_sim_time
+        }.items()
     )
     
     return LaunchDescription([
-        use_sim_time_arg,
+        use_simulation_arg,
         sim_group,
         real_robot_group,
         ekf_launch
